@@ -1,0 +1,36 @@
+<div class="card rounded-[24px] w-[400px] h-[536px] px-[1.5rem] py-[1.5rem]">
+  <div class="relative">
+    <img src="<%= imageUrl %>" alt="" />
+    <div class="absolute bottom-[15px] left-1/2 transform -translate-x-1/2">
+      <div
+        class="rounded-[16px] bg-[#0F182E] w-[192px] flex px-[3px] py-[7px] justify-center"
+      >
+        <img src="assets/cards/fire.png" alt="" class="w-[18px] mr-[5px]" />
+        <span><%= time %></span>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="text-[24px] font-semibold mt-[20px]"><%= title %></h2>
+
+  <div class="mt-[20px] flex justify-between items-center">
+    <div class="flex justify-between w-[150px]">
+      <img src="assets/cards/pfp.png" alt="" class="w-[56px]" />
+      <div>
+        <p class="text-[14px] text-[#8F9CA9]">Kreator</p>
+        <h3 class="text-[18px]"><%= kreator %></h3>
+      </div>
+    </div>
+
+    <div class="items-center">
+      <p class="text-[14px] text-[#8F9CA9] text-right">Tawaran saat ini</p>
+      <div class="flex items-center justify-center">
+        <span><img src="assets/cards/eth.png" alt="" class="w-[20px]" /></span>
+        <span class="text-[20px] text-[#15BFFD] font-extrabold mr-[5px]"
+          ><%= price %></span
+        >
+        <span class="text-[20px] text-[#15BFFD] font-extrabold">ETH</span>
+      </div>
+    </div>
+  </div>
+</div>

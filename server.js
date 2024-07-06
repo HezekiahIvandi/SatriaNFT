@@ -4,6 +4,7 @@ const port = 3000;
 const expressLayouts = require("express-ejs-layouts");
 const homeRoutes = require("./routes/homeRoutes");
 app.use(express.json());
+
 app.set("view engine", "ejs");
 
 //static
