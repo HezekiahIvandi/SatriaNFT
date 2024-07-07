@@ -21,7 +21,6 @@ button {
 }
 li {
   cursor: pointer;
-  color: #879cb5;
   font-weight: 600;
 }
 
@@ -284,3 +283,24 @@ li:hover {
     opacity: 1;
   }
 } */
+
+@media (max-width: 768px) {
+  .hide {
+    transform: translateX(100%);
+  }
+  #side-bar {
+    background: hsl(0 0% 0% / 1);
+    display: flex;
+    flex-direction: column;
+    row-gap: 3rem;
+    padding: min(30vh, 10rem) 4rem;
+    transition: 350ms ease-in-out;
+  }
+  @supports (backdrop-filter: blur(0px)) {
+    /* jika browser support backdrop filter maka gunakan style ini */
+    #side-bar {
+      background: hsl(0 0% 100% / 0.1);
+      backdrop-filter: blur(20px);
+    }
+  }
+}
