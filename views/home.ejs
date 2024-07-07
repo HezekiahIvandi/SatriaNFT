@@ -11,7 +11,7 @@
 
   <!-- Absolute text -->
   <div
-    class="absolute pl-[120px] pr-[20px] left-[0px] top-[-40px] w-[661px] z-[100] text-white bg-transparent backdrop-blur-[3px]"
+    class="absolute pl-[120px] pr-[20px] left-[0px] top-[-40px] w-[661px] z-[10] text-white bg-transparent backdrop-blur-[3px]"
   >
     <h1 class="text-[64px] font-medium leading-tight">
       Jelajahi Era Baru <br />NFTs <span class="gradient-text">yang Abadi</span>
@@ -30,7 +30,7 @@
         Mulai Sekarang
       </button>
       <button
-        class="neon-btn2 font-semibold w-[150px] ml-[1rem] px-[30px] py-[12px] bg-[#313860] hover:bg-[#4a5281] ease-in-out duration-75"
+        class="animate-pulse neon-btn2 font-semibold w-[150px] ml-[1rem] px-[30px] py-[12px] bg-[#313860] hover:bg-[#4a5281] ease-in-out duration-75"
       >
         Buat NFTs
       </button>
@@ -82,8 +82,20 @@
     title: "imToken" }) %>
   </div>
 
-  <h2 class="text-[40px] pl-[120px] mt-[30px] mb-[20px]">NFTs Terkini🔥</h2>
+  <h2 class="text-[40px] pl-[120px] mt-[30px] mb-[20px]">
+    NFTs Terkini <span class="animate-pulse duration-75">🔥</span>
+  </h2>
   <!-- NFTs terkini -->
-  <div></div>
+  <div class="px-[120px]">
+    <div class="flex justify-between">
+      <%- include('./components/categoryButton.ejs', {text: "Koleksi"}) %> <%-
+      include('./components/categoryButton.ejs', {text: "Ilustrasi"}) %> <%-
+      include('./components/categoryButton.ejs', {text: "Lukisan"}) %> <%-
+      include('./components/categoryButton.ejs', {text: "Olahraga"}) %> <%-
+      include('./components/categoryButton.ejs', {text: "Musik & Audio"}) %> <%-
+      include('./components/categoryButton.ejs', {text: "Video"}) %> <%-
+      include('./components/categoryButton.ejs', {text: "Animasi"}) %>
+    </div>
+  </div>
 </div>
 <script src="/js/home.js"></script>

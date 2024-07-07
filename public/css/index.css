@@ -1,3 +1,6 @@
+/* general styles */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 @font-face {
   font-family: ClashDisplay;
   src: url("../assets/fonts/ClashDisplay.ttf");
@@ -9,12 +12,12 @@ body {
 
 h1,
 h2 {
-  font-family: ClashDisplay, Poppins;
+  font-family: ClashDisplay, "Poppins";
 }
 p,
 a,
 button {
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
 }
 li {
   cursor: pointer;
@@ -26,6 +29,7 @@ li:hover {
   color: white;
 }
 
+/* navbar styles */
 .current-page {
   position: relative;
   color: #fff;
@@ -42,34 +46,7 @@ li:hover {
   background-color: #1a4dff;
 }
 
-.neon-btn {
-  position: relative;
-}
-
-.neon-btn::before {
-  content: "";
-  position: absolute;
-  background-image: url("../assets/btn-border-up.png");
-  left: -30px;
-  top: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  background-size: 100%;
-  background-repeat: no-repeat;
-}
-.neon-btn::after {
-  content: "";
-  position: absolute;
-  background-image: url("../assets/btn-border-down.png");
-  bottom: -8px;
-  left: 27px;
-  height: 100%;
-  width: 100%;
-  background-size: 100%;
-  background-repeat: no-repeat;
-}
-
+/* Automatic slides styles */
 .card {
   border: 1px solid transparent;
   background: linear-gradient(to right, #272d37, #272d37) padding-box,
@@ -95,10 +72,10 @@ li:hover {
   gap: 21px;
   animation: scroll 40s linear infinite;
 }
-.cards-container:hover {
+/* .cards-container:hover {
   animation-play-state: paused;
   -webkit-animation-play-state: paused;
-}
+} */
 /* .cards-container .card {
   animation: scroll 4s infinite;
   transition: ease-in-out;
@@ -108,6 +85,44 @@ li:hover {
   to {
     transform: translate(-50%);
   }
+}
+
+/* neon buttons */
+.neon-btn {
+  position: relative;
+}
+
+.neon-btn::before {
+  transition: ease-in-out 0.3s;
+  opacity: 0.2;
+  content: "";
+  position: absolute;
+  background-image: url("../assets/btn-border-up.png");
+  left: -30px;
+  top: -5px;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.neon-btn::after {
+  transition: ease-in-out 0.3s;
+  opacity: 0.2;
+  content: "";
+  position: absolute;
+  background-image: url("../assets/btn-border-down.png");
+  bottom: -3px;
+  left: 27px;
+  height: 100%;
+  width: 100%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.neon-btn:hover::before,
+.neon-btn:hover::after {
+  opacity: 1;
 }
 
 .neon-btn2 {
@@ -203,6 +218,8 @@ li:hover {
 .neon-btn4:hover::before {
   opacity: 1;
 }
+
+/* gradient texts */
 .gradient-text {
   background: linear-gradient(90deg, #69eacb 0%, #eaccf8 20%, #194cff 85%);
   -webkit-background-clip: text;
@@ -222,3 +239,48 @@ li:hover {
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+/* onscroll animation */
+
+.langkah-button,
+.wallet-button {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 1s;
+}
+
+.show {
+  filter: blur(0);
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.wallet-button:nth-child(2) {
+  transition-delay: 200ms;
+}
+.wallet-button:nth-child(3) {
+  transition-delay: 400ms;
+}
+.wallet-button:nth-child(4) {
+  transition-delay: 600ms;
+}
+.wallet-button:nth-child(5) {
+  transition-delay: 800ms;
+}
+/* .langkah-button,
+.wallet-button {
+  animation: fade-in linear forwards;
+  animation-timeline: view();
+  animation-range: entry;
+}
+@keyframes fade-in {
+  from {
+    scale: 0.9;
+    opacity: 0.8;
+  }
+  to {
+    scale: 1;
+    opacity: 1;
+  }
+} */
