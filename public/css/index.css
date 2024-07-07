@@ -1,8 +1,21 @@
+@font-face {
+  font-family: ClashDisplay;
+  src: url("../assets/fonts/ClashDisplay.ttf");
+}
 body {
   background-color: #0c1033;
   color: white;
 }
 
+h1,
+h2 {
+  font-family: ClashDisplay, Poppins;
+}
+p,
+a,
+button {
+  font-family: Poppins;
+}
 li {
   cursor: pointer;
   color: #879cb5;
@@ -31,7 +44,6 @@ li:hover {
 
 .neon-btn {
   position: relative;
-  color: #879cb5;
 }
 
 .neon-btn::before {
@@ -81,7 +93,7 @@ li:hover {
   width: fit-content;
   flex-wrap: nowrap;
   gap: 21px;
-  animation: scroll 30s linear infinite;
+  animation: scroll 40s linear infinite;
 }
 .cards-container:hover {
   animation-play-state: paused;
@@ -96,4 +108,117 @@ li:hover {
   to {
     transform: translate(-50%);
   }
+}
+
+.neon-btn2 {
+  position: relative;
+}
+
+.neon-btn2::before {
+  content: "";
+  position: absolute;
+  background-image: url("../assets/btn-border-up.png");
+  left: -7px;
+  top: -7px;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.neon-btn2::after {
+  content: "";
+  position: absolute;
+  background-image: url("../assets/btn-border-down.png");
+  bottom: -2px;
+  left: 8px;
+  height: 100%;
+  width: 100%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.neon-btn3::before {
+  opacity: 0;
+  transition: ease-in-out 0.25s;
+  content: "";
+  position: absolute;
+  background-image: url("../assets/langkah/border-top.png");
+  left: -7px;
+  top: -7px;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background-size: 50%;
+  background-repeat: no-repeat;
+}
+.neon-btn3::after {
+  opacity: 0;
+  transition: ease-in-out 0.25s;
+  content: "";
+  position: absolute;
+  background-image: url("../assets/langkah/border-bottom.png");
+  bottom: -114px;
+  left: 125px;
+  height: 100%;
+  width: 100%;
+  background-size: 50%;
+  background-repeat: no-repeat;
+}
+
+.neon-btn3:hover::after,
+.neon-btn3:hover::before {
+  opacity: 1;
+}
+
+.neon-btn4::before {
+  opacity: 0;
+  transition: ease-in-out 0.25s;
+  content: "";
+  position: absolute;
+  background-image: url("../assets/langkah/border-top.png");
+  left: -5px;
+  top: -5px;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background-size: 50%;
+  background-repeat: no-repeat;
+}
+.neon-btn4::after {
+  opacity: 0;
+  transition: ease-in-out 0.25s;
+  content: "";
+  position: absolute;
+  background-image: url("../assets/langkah/border-bottom.png");
+  bottom: -117px;
+  left: 100px;
+  height: 100%;
+  width: 100%;
+  background-size: 50%;
+  background-repeat: no-repeat;
+}
+
+.neon-btn4:hover::after,
+.neon-btn4:hover::before {
+  opacity: 1;
+}
+.gradient-text {
+  background: linear-gradient(90deg, #69eacb 0%, #eaccf8 20%, #194cff 85%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.gradient-text2 {
+  background: linear-gradient(
+    90deg,
+    #69eacb 0%,
+    #a9dbe1 25%,
+    #eaccf8 50%,
+    #95b3ef 68%,
+    #419be5 85%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
