@@ -8,6 +8,7 @@
 body {
   background-color: #0c1033;
   color: white;
+  /* overflow-x: hidden; */
 }
 
 h1,
@@ -16,6 +17,7 @@ h2 {
 }
 p,
 a,
+h3,
 button {
   font-family: "Poppins", sans-serif;
 }
@@ -86,6 +88,44 @@ li:hover {
   }
 }
 
+/* carousel styles */
+#wrapper {
+}
+.carousel {
+  overflow: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+.carousel-container {
+  overflow-x: hidden;
+}
+.carousel::-webkit-scrollbar {
+  /* hide scrollbar */
+  height: 0;
+  display: none;
+}
+.carousel::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 15%;
+  height: 100%;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), #0c1033);
+  backdrop-filter: blur(2px);
+  z-index: 50;
+}
+.carousel::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 15%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), #0c1033);
+  backdrop-filter: blur(2px);
+  z-index: 50;
+}
 /* neon buttons */
 .neon-btn {
   position: relative;
@@ -97,12 +137,12 @@ li:hover {
   content: "";
   position: absolute;
   background-image: url("../assets/btn-border-up.png");
-  left: -30px;
-  top: -5px;
-  right: 0;
+  left: -2.5%;
+  top: -15.5%;
+  right: 5%;
   height: 100%;
   width: 100%;
-  background-size: 100%;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
 }
 .neon-btn::after {
@@ -111,12 +151,13 @@ li:hover {
   content: "";
   position: absolute;
   background-image: url("../assets/btn-border-down.png");
-  bottom: -3px;
-  left: 27px;
+  bottom: -15.5%;
+  right: 0%;
   height: 100%;
   width: 100%;
-  background-size: 100%;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
+  z-index: 999;
 }
 
 .neon-btn:hover::before,
@@ -132,8 +173,8 @@ li:hover {
   content: "";
   position: absolute;
   background-image: url("../assets/btn-border-up.png");
-  left: -7px;
-  top: -7px;
+  left: -3%;
+  top: -10%;
   right: 0;
   height: 100%;
   width: 100%;
@@ -144,8 +185,8 @@ li:hover {
   content: "";
   position: absolute;
   background-image: url("../assets/btn-border-down.png");
-  bottom: -2px;
-  left: 8px;
+  bottom: -7%;
+  right: -3%;
   height: 100%;
   width: 100%;
   background-size: 100%;
@@ -158,8 +199,8 @@ li:hover {
   content: "";
   position: absolute;
   background-image: url("../assets/langkah/border-top.png");
-  left: -7px;
-  top: -7px;
+  left: -2.5%;
+  top: -2.5%;
   right: 0;
   height: 100%;
   width: 100%;
@@ -172,8 +213,10 @@ li:hover {
   content: "";
   position: absolute;
   background-image: url("../assets/langkah/border-bottom.png");
-  bottom: -114px;
-  left: 125px;
+  /* bottom: -122px;
+  left: 122px; */
+  bottom: -52%;
+  left: 52%;
   height: 100%;
   width: 100%;
   background-size: 50%;
@@ -191,8 +234,8 @@ li:hover {
   content: "";
   position: absolute;
   background-image: url("../assets/langkah/border-top.png");
-  left: -5px;
-  top: -5px;
+  left: -2.5%;
+  top: -2.5%;
   right: 0;
   height: 100%;
   width: 100%;
@@ -205,8 +248,8 @@ li:hover {
   content: "";
   position: absolute;
   background-image: url("../assets/langkah/border-bottom.png");
-  bottom: -117px;
-  left: 100px;
+  bottom: -52%;
+  left: 52%;
   height: 100%;
   width: 100%;
   background-size: 50%;
@@ -226,6 +269,19 @@ li:hover {
   -webkit-text-fill-color: transparent;
 }
 .gradient-text2 {
+  background: linear-gradient(
+    90deg,
+    #69eacb 0%,
+    #a9dbe1 25%,
+    #eaccf8 50%,
+    #95b3ef 68%,
+    #419be5 85%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.gradient-text3 {
   background: linear-gradient(
     90deg,
     #69eacb 0%,
@@ -284,7 +340,8 @@ li:hover {
   }
 } */
 
-@media (max-width: 768px) {
+/* navbar responsive */
+@media (max-width: 1024px) {
   .hide {
     transform: translateX(100%);
   }
@@ -304,3 +361,45 @@ li:hover {
     }
   }
 }
+
+@media (max-width: 600px) {
+  .langkah-button,
+  .wallet-button {
+    width: 160px;
+  }
+
+  .langkah-button img {
+    height: 64px;
+  }
+
+  .wallet-button img {
+    width: 64px;
+  }
+
+  .langkah-button h2,
+  .wallet-button h2 {
+    font-size: 20px;
+    margin-top: 4px;
+  }
+  .langkah-button p,
+  .wallet-button p {
+    font-size: 12px;
+    margin-top: 4px;
+  }
+}
+
+/* @media (min-width: 1600px) {
+  #langkah-button-container {
+    justify-content: center;
+  }
+
+  .langkah-button {
+    width: 270px;
+  }
+} */
+
+/* mobile 0px - 768px */
+
+/* tablet 768px - 1024px */
+
+/* desktop (>1024px) */

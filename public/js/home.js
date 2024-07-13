@@ -28,3 +28,48 @@ const animatedElements2 = document.querySelectorAll(".wallet-button");
 animatedElements2.forEach((element) => {
   observer.observe(element);
 });
+
+/////////////////////Carousel script
+
+const carousel = document.querySelector(".carousel");
+const carouselContainer = document.querySelector(".carousel-container");
+const prev = document.getElementById("prev");
+const next = document.getElementById("next");
+const gap = 20;
+let width = carousel.offsetWidth;
+const scrollAmount = width + gap;
+
+prev.addEventListener("click", () => {
+  carousel.scrollBy(-scrollAmount, 0);
+});
+next.addEventListener("click", () => {
+  carousel.scrollBy(scrollAmount, 0);
+});
+
+// Calculate the middle scroll position
+const middleScrollPosition = carousel.scrollWidth / 2 - width / 2;
+
+function scrollToMiddle() {
+  carousel.scroll({
+    left: middleScrollPosition,
+    behavior: "smooth",
+  });
+}
+
+scrollToMiddle();
+
+window.addEventListener("resize", (e) => (width = carousel.offsetWidth));
+
+setInterval(() => {
+  const maxScrollLeft = carousel.scrollWidth - carousel.clientWidth;
+  const currentScrollLeft = carousel.scrollLeft;
+  console.log("max", maxScrollLeft);
+  console.log("left", currentScrollLeft);
+  if (currentScrollLeft == maxScrollLeft) {
+    // If at the end, scroll to the previous item
+    carousel.scrollBy(-maxScrollLeft, 0);
+  } else {
+    // Otherwise, scroll to the next item
+    carousel.scrollBy(scrollAmount, 0);
+  }
+}, 6000);

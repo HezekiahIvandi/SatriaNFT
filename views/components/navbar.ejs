@@ -1,11 +1,15 @@
 <!-- sticky w-[100%] z-[99] top-0 -->
 <nav
-  class="relative px-[40px] lg:px-[120px] py-[30px] flex justify-between items-center border-b-[#879CB5] border-b-[1px] bg-[#0c1033]"
+  class="relative px-[40px] md:px-[80px] lg:px-[120px] py-[30px] flex justify-between items-center border-b-[#879CB5] border-b-[1px] bg-[#0c1033]"
 >
-  <img src="assets/Logo.png" alt="" class="w-[120px] lg:w-[160px]" />
+  <img
+    src="assets/Logo.png"
+    alt=""
+    class="w-[120px] md:w-[140px] lg:w-[160px] 2xl:w-[200px]"
+  />
 
   <ul
-    class="hidden md:flex md:justify-between md:w-[490px] md:static md:bg-transparent md:p-0 md:text-[16px] md:text-[#879cb5]"
+    class="hidden justify-between w-[50%] max-w-[595px] static bg-transparent p-0 text-[16px] text-[#879cb5] lg:flex 2xl:text-[20px]"
   >
     <li class="current-page"><a href="/">Jelajahi</a></li>
     <li><a href="/market">Pasar NFTs</a></li>
@@ -14,23 +18,23 @@
   </ul>
 
   <button
-    class="hidden lg:inline neon-btn py-[15px] text-[16px] font-semibold text-[#879cb5] hover:text-[white] animate-pulse"
+    class="neon-btn hidden text-[16px] font-semibold text-[#879cb5] hover:text-[white] py-[10px] px-[30px] lg:inline 2xl:w-[270px] 2xl:text-[20px] 2xl:py-[15px]"
   >
     Hubungkan Wallet
   </button>
 
   <!-- mobile navigation elements -->
-  <div class="md:hidden">
+  <div class="lg:hidden">
     <button
       id="mobile-menu-open"
-      class="absolute top-[30px] right-[40px] aspect-square w-[2rem] z-[90] md:hidden"
+      class="absolute top-[30px] right-[40px] aspect-square w-[2rem] z-[90]"
     >
       <span class="sr-only">open menu</span>
       <img src="assets/burger-menu.png" alt="" class="w-[1.3rem]" />
     </button>
     <ul
       id="side-bar"
-      class="hide fixed top-0 bottom-0 right-0 left-[30%] z-[100] text-[25px] text-[grey] md:hidden"
+      class="hide fixed top-0 bottom-0 right-0 left-[30%] z-[100] text-[25px] text-[grey]"
     >
       <li class="current-page"><a href="/">Jelajahi</a></li>
       <li><a href="/market">Pasar NFTs</a></li>
@@ -39,7 +43,7 @@
 
       <button
         id="mobile-menu-close"
-        class="absolute top-[30px] right-[40px] aspect-square w-[2rem] z-[101] md:hidden"
+        class="absolute top-[30px] right-[40px] aspect-square w-[2rem] z-[101]"
       >
         <span class="sr-only">close</span>
         <img src="assets/close.png" alt="close-icon" class="w-[1.7rem]" />

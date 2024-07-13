@@ -5,60 +5,117 @@
     <div class="cards-container flex">
       <% cardsInfo.forEach(cardInfo => { %> <%- include('./components/card.ejs',
       { imageUrl: cardInfo.imageUrl, time:cardInfo.time, title: cardInfo.title,
-      kreator: cardInfo.kreator, price: cardInfo.price }) %> <% }); %>
+      rupiah: cardInfo.rupiah, price: cardInfo.price, volatility:
+      cardInfo.volatility,up: cardInfo.up }) %> <% }); %>
     </div>
   </div>
 
   <!-- Absolute text -->
   <div
-    class="absolute pl-[120px] pr-[20px] left-[0px] top-[-40px] w-[661px] z-[10] text-white bg-transparent backdrop-blur-[3px]"
+    class="absolute pl-[40px] pr-[40px] md:pr-[20px] md:pl-[80px] lg:pl-[120px] left-[0px] top-[-40px] w-[fit-content] md:w-[661px] 2xl:w-[788px] z-[10] text-white bg-transparent backdrop-blur-[3px]"
   >
-    <h1 class="text-[64px] font-medium leading-tight">
-      Jelajahi Era Baru <br />NFTs <span class="gradient-text">yang Abadi</span>
+    <h1
+      class="text-[32px] md:text-[48px] lg:text-[64px] 2xl:text-[72px] font-medium leading-tight"
+    >
+      Jelajahi Era Baru <br />NFTs
+      <span class="gradient-text font-semibold">yang Abadi</span>
       <br />
       dari Tanah Air
     </h1>
-    <p class="mt-[30px] mb-[40px]">
+    <p class="mt-[30px] mb-[40px] text-[12px] md:text-[16px] 2xl:text-[20px]">
       SatriaNFT, pasar NFTs karya anak bangsa terdepan di Ethereum. Rumah bagi
       generasi baru pencipta digital untuk mengekspresikan imajinasi. Temukan
       koleksi NFT yang tak tertandingi, eksklusif di SatriaNFT.
     </p>
-    <div class="mt-[20px]">
+    <div class="mt-[20px] text-[12px] md:text-[16px] 2xl:text-[20px]">
       <button
-        class="font-semibold w-[165px] px-[15px] py-[12px] bg-[#00229C] hover:bg-[#2046cc] ease-in-out duration-75"
+        class="font-semibold rounded-[8px] w-[120px] md:w-[165px] 2xl:w-[239px] 2xl:h-[70px] px-[8px] md:px-[15px] py-[12px] bg-[#00229C] hover:bg-[#2046cc] ease-in-out duration-75"
       >
         Mulai Sekarang
       </button>
       <button
-        class="animate-pulse neon-btn2 font-semibold w-[150px] ml-[1rem] px-[30px] py-[12px] bg-[#313860] hover:bg-[#4a5281] ease-in-out duration-75"
+        class="animate-pulse rounded-[8px] neon-btn2 font-semibold w-[120px] md:w-[150px] 2xl:w-[239px] 2xl:h-[70px] ml-[1rem] px-[30px] py-[12px] 2xl:py-[18px] bg-[#313860] hover:bg-[#4a5281] ease-in-out duration-75"
       >
         Buat NFTs
       </button>
     </div>
-    <div class="flex justify-between w-[429px] mt-[20px]">
+    <div class="flex justify-between w-[300px] md:w-[429px] mt-[20px]">
       <div class="">
-        <h2 class="text-[32px] font-semibold text-center">827K+</h2>
-        <p class="text-white mt-[10px] text-center">Koleksi</p>
+        <h2
+          class="text-[24px] md:text-[32px] 2xl:text-[36px] font-semibold text-center"
+        >
+          827K+
+        </h2>
+        <p class="text-white mt-[10px] text-center 2xl:text-[20px]">Koleksi</p>
       </div>
       <div class="">
-        <h2 class="text-[32px] font-semibold text-center">400K+</h2>
-        <p class="text-white mt-[10px] text-center">Kreator</p>
+        <h2
+          class="text-[24px] md:text-[32px] 2xl:text-[36px] font-semibold text-center"
+        >
+          400K+
+        </h2>
+        <p class="text-white mt-[10px] text-center 2xl:text-[20px]">Kreator</p>
       </div>
       <div class="">
-        <h2 class="text-[32px] font-semibold text-center">20K+</h2>
-        <p class="text-white mt-[10px] text-center">Komunitas</p>
+        <h2
+          class="text-[24px] md:text-[32px] 2xl:text-[36px] font-semibold text-center"
+        >
+          20K+
+        </h2>
+        <p class="text-white mt-[10px] text-center 2xl:text-[20px]">
+          Komunitas
+        </p>
       </div>
     </div>
   </div>
 </div>
+
 <!-- section 2 -->
 <div class="mt-[120px]">
-  <h2 class="text-center text-[48px]">
+  <h2
+    class="text-[20px] md:text-[30px] lg:text-[40px] 2xl:text-[48px] text-center mt-[80px] mb-[20px]"
+  >
+    <span class="gradient-text3 font-bold">NFTs Terkini</span>
+    <span class="animate-pulse duration-75">🔥</span>
+  </h2>
+  <!-- carousel nfts terkini -->
+  <div id="wrapper" class="relative">
+    <div class="carousel">
+      <div class="carousel-container flex w-fit gap-[20px]">
+        <% cardsInfo.forEach(cardInfo => { %> <%-
+        include('./components/card.ejs', { imageUrl: cardInfo.imageUrl,
+        time:cardInfo.time, title: cardInfo.title, rupiah: cardInfo.rupiah,
+        price: cardInfo.price,volatility: cardInfo.volatility, up: cardInfo.up
+        }) %> <% }); %>
+      </div>
+
+      <!-- arrow buttons -->
+      <button class="absolute top-[45%] left-[4rem] z-[51]" id="prev">
+        <img src="assets/cards/left-arrow.png" alt="" class="w-[70px]" />
+      </button>
+      <button class="absolute top-[45%] right-[4rem] z-[51]" id="next">
+        <img src="assets/cards/right-arrow.png" alt="" class="w-[70px]" />
+      </button>
+    </div>
+
+    <div class="flex justify-center items-center mt-[40px]">
+      <button
+        class="border-[1px] px-[24px] py-[16px] border-solid border-[#4639FA] rounded-[8px] text-[16px] 2xl:text-[24px] text-center"
+      >
+        Lihat semua
+      </button>
+    </div>
+  </div>
+
+  <h2 class="text-center text-[24px] md:text-[36px] lg:text-[48px] mt-[90px]">
     Cara Kerja <span class="gradient-text2 font-bold">SatriaNFT</span>
   </h2>
 
   <!-- Langkah Buttons -->
-  <div class="px-[120px] flex justify-between gap-[30px] mt-[40px]">
+  <div
+    id="langkah-button-container"
+    class="flex flex-wrap justify-evenly gap-[20px] md:justify-between lg:gap-[40px] mt-[40px] px-[40px] md:px-[80px] lg:px-[120px]"
+  >
     <%- include('./components/langkahButton.ejs', {imgUrl:
     "assets/langkah/1.png", langkah: "LANGKAH 1", title: "Hubungkan Wallet"}) %>
     <%- include('./components/langkahButton.ejs', {imgUrl:
@@ -69,9 +126,15 @@
     langkah: "LANGKAH 4", title: "Terima NFTs Anda"}) %>
   </div>
 
-  <h2 class="text-[40px] pl-[120px] mt-[30px] mb-[20px]">Pilih Wallet</h2>
+  <h2
+    class="text-[20px] md:text-[30px] lg:text-[40px] 2xl:text-[48px] pl-[40px] md:pl-[80px] lg:pl-[120px] mt-[90px] mb-[40px]"
+  >
+    Hubungkan Wallet
+  </h2>
   <!-- Wallet option buttons -->
-  <div class="px-[120px] flex justify-between gap-[30px]">
+  <div
+    class="px-[40px] md:px-[80px] lg:px-[120px] flex flex-wrap justify-evenly md:justify-between gap-[10px] md:gap-[20px]"
+  >
     <%- include('./components/walletButton.ejs',{ imgUrl: "assets/wallet/1.png",
     title: "Metamask" }) %> <%- include('./components/walletButton.ejs',{
     imgUrl: "assets/wallet/2.png", title: "Exodus" }) %> <%-
@@ -82,7 +145,9 @@
     title: "imToken" }) %>
   </div>
 
-  <h2 class="text-[40px] pl-[120px] mt-[30px] mb-[20px]">
+  <h2
+    class="text-[20px] md:text-[30px] lg:text-[40px] pl-[40px] md:pl-[80px] lg:pl-[120px] mt-[30px] mb-[20px]"
+  >
     NFTs Terkini <span class="animate-pulse duration-75">🔥</span>
   </h2>
   <!-- NFTs terkini -->
