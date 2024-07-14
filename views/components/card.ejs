@@ -1,4 +1,6 @@
-<div class="card rounded-[24px] w-[400px] px-[1.5rem] py-[2rem] items-center">
+<div
+  class="card rounded-[18px] 2xl:rounded-[24px] w-[300px] 2xl:w-[400px] px-[1.5rem] py-[1.5rem] 2xl:py-[2rem] items-center"
+>
   <div class="relative">
     <img src="<%= imageUrl %>" alt="" />
     <div class="absolute bottom-[15px] left-1/2 transform -translate-x-1/2">
@@ -12,8 +14,10 @@
   </div>
 
   <div>
-    <h3 class="text-[24px] font-semibold mt-[20px]"><%= title %></h3>
-    <p class="text-[#879CB5] text-[16px]">Koleksi nusaNFT</p>
+    <h3 class="text-[20px] 2xl:text-[24px] font-semibold mt-[20px]">
+      <%= title %>
+    </h3>
+    <p class="text-[#879CB5] text-[14px] 2xl:text-[16px]">Koleksi nusaNFT</p>
   </div>
 
   <div class="mt-[20px] flex justify-between items-center">
@@ -29,10 +33,10 @@
         <span class="text-[20px] text-[#15BFFD] font-extrabold">ETH</span>
       </div>
     </div>
-    <div class="flex justify-between w-[150px]">
+    <div class="flex justify-between w-[120px] 2xl:w-[150px]">
       <div>
-        <p class="text-[20px]">
-          <span class="text-[20px]">Rp.</span> <%= rupiah %>
+        <p class="text-[16px] 2xl:text-[20px]">
+          <span class="text-[16px] 2xl:text-[20px]">Rp.</span> <%= rupiah %>
           <span class="text-[12px]">,00</span>
         </p>
 

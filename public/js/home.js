@@ -63,8 +63,6 @@ window.addEventListener("resize", (e) => (width = carousel.offsetWidth));
 setInterval(() => {
   const maxScrollLeft = carousel.scrollWidth - carousel.clientWidth;
   const currentScrollLeft = carousel.scrollLeft;
-  console.log("max", maxScrollLeft);
-  console.log("left", currentScrollLeft);
   if (currentScrollLeft == maxScrollLeft) {
     // If at the end, scroll to the previous item
     carousel.scrollBy(-maxScrollLeft, 0);

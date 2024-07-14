@@ -1,5 +1,5 @@
 <!-- Hero section -->
-<div class="relative mt-[80px]">
+<div class="relative mt-[100px]">
   <!-- Slide -->
   <div class="slide">
     <div class="cards-container flex">
@@ -22,12 +22,12 @@
       <br />
       dari Tanah Air
     </h1>
-    <p class="mt-[30px] mb-[40px] text-[12px] md:text-[16px] 2xl:text-[20px]">
+    <p class="mt-[40px] mb-[40px] text-[12px] md:text-[16px] 2xl:text-[20px]">
       SatriaNFT, pasar NFTs karya anak bangsa terdepan di Ethereum. Rumah bagi
       generasi baru pencipta digital untuk mengekspresikan imajinasi. Temukan
       koleksi NFT yang tak tertandingi, eksklusif di SatriaNFT.
     </p>
-    <div class="mt-[20px] text-[12px] md:text-[16px] 2xl:text-[20px]">
+    <div class="text-[12px] md:text-[16px] 2xl:text-[20px]">
       <button
         class="font-semibold rounded-[8px] w-[120px] md:w-[165px] 2xl:w-[239px] 2xl:h-[70px] px-[8px] md:px-[15px] py-[12px] bg-[#00229C] hover:bg-[#2046cc] ease-in-out duration-75"
       >
@@ -39,6 +39,7 @@
         Buat NFTs
       </button>
     </div>
+
     <div class="flex justify-between w-[300px] md:w-[429px] mt-[20px]">
       <div class="">
         <h2
@@ -71,9 +72,9 @@
 </div>
 
 <!-- section 2 -->
-<div class="mt-[120px]">
+<div class="mt-[80px] lg:mt-[240px] 2xl:mt-[120px]">
   <h2
-    class="text-[20px] md:text-[30px] lg:text-[40px] 2xl:text-[48px] text-center mt-[80px] mb-[20px]"
+    class="text-[24px] md:text-[30px] lg:text-[40px] 2xl:text-[48px] text-center mt-[80px] mb-[40px]"
   >
     <span class="gradient-text3 font-bold">NFTs Terkini</span>
     <span class="animate-pulse duration-75">🔥</span>
@@ -81,7 +82,7 @@
   <!-- carousel nfts terkini -->
   <div id="wrapper" class="relative">
     <div class="carousel">
-      <div class="carousel-container flex w-fit gap-[20px]">
+      <div class="carousel-container flex w-fit gap-[40px]">
         <% cardsInfo.forEach(cardInfo => { %> <%-
         include('./components/card.ejs', { imageUrl: cardInfo.imageUrl,
         time:cardInfo.time, title: cardInfo.title, rupiah: cardInfo.rupiah,
@@ -100,14 +101,14 @@
 
     <div class="flex justify-center items-center mt-[40px]">
       <button
-        class="border-[1px] px-[24px] py-[16px] border-solid border-[#4639FA] rounded-[8px] text-[16px] 2xl:text-[24px] text-center"
+        class="border-[1px] px-[24px] py-[16px] border-solid border-[#4639FA] rounded-[8px] text-[16px] 2xl:text-[24px] text-center hover:bg-[#4639FA] duration-75 ease-in-out"
       >
         Lihat semua
       </button>
     </div>
   </div>
 
-  <h2 class="text-center text-[24px] md:text-[36px] lg:text-[48px] mt-[90px]">
+  <h2 class="text-center text-[24px] md:text-[36px] lg:text-[48px] mt-[120px]">
     Cara Kerja <span class="gradient-text2 font-bold">SatriaNFT</span>
   </h2>
 
@@ -127,7 +128,7 @@
   </div>
 
   <h2
-    class="text-[20px] md:text-[30px] lg:text-[40px] 2xl:text-[48px] pl-[40px] md:pl-[80px] lg:pl-[120px] mt-[90px] mb-[40px]"
+    class="text-[20px] md:text-[30px] lg:text-[40px] 2xl:text-[48px] pl-[40px] md:pl-[80px] lg:pl-[120px] mt-[60px] mb-[40px]"
   >
     Hubungkan Wallet
   </h2>
@@ -146,13 +147,13 @@
   </div>
 
   <h2
-    class="text-[20px] md:text-[30px] lg:text-[40px] pl-[40px] md:pl-[80px] lg:pl-[120px] mt-[30px] mb-[20px]"
+    class="text-[20px] md:text-[30px] lg:text-[40px] 2xl:text-[48px] pl-[40px] md:pl-[80px] lg:pl-[120px] mt-[30px] mb-[20px]"
   >
-    NFTs Terkini <span class="animate-pulse duration-75">🔥</span>
+    Jelajahi NFTs
   </h2>
   <!-- NFTs terkini -->
-  <div class="px-[120px]">
-    <div class="flex justify-between">
+  <div class="px-[40px] md:px-[80px] lg:px-[120px]">
+    <div class="flex justify-start lg:justify-between flex-wrap gap-[10px]">
       <%- include('./components/categoryButton.ejs', {text: "Koleksi"}) %> <%-
       include('./components/categoryButton.ejs', {text: "Ilustrasi"}) %> <%-
       include('./components/categoryButton.ejs', {text: "Lukisan"}) %> <%-
@@ -161,6 +162,52 @@
       include('./components/categoryButton.ejs', {text: "Video"}) %> <%-
       include('./components/categoryButton.ejs', {text: "Animasi"}) %>
     </div>
+    <div
+      class="flex flex-nowrap overflow-auto md:overflow-hidden md:grid md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-[25px] mt-[40px]"
+    >
+      <% cardsInfo.forEach(cardInfo => { %> <%- include('./components/card.ejs',
+      { imageUrl: cardInfo.imageUrl, time:cardInfo.time, title: cardInfo.title,
+      rupiah: cardInfo.rupiah, price: cardInfo.price,volatility:
+      cardInfo.volatility, up: cardInfo.up }) %> <% }); %>
+    </div>
+    <div class="flex justify-center items-center mt-[40px]">
+      <button
+        class="border-[1px] px-[24px] py-[16px] border-solid border-[#4639FA] rounded-[8px] text-[16px] 2xl:text-[24px] text-center hover:bg-[#4639FA] duration-75 ease-in-out"
+      >
+        Lihat semua
+      </button>
+    </div>
   </div>
+
+  <h2
+    class="text-[24px] md:text-[30px] lg:text-[40px] 2xl:text-[48px] text-center mt-[120px] mb-[40px]"
+  >
+    <span class="gradient-text3 font-bold">Top 9 Kreator Terkini </span>
+    <span>🥇</span>
+  </h2>
+  <!-- top Kreator -->
+  <div class="overflow-auto">
+    <div
+      class="px-[40px] md:px-[80px] lg:px-[120px] w-fit items-center flex flex-nowrap overflow-hidden gap-[20px] md:flex-col md:justify-center lg:grid lg:grid-cols-2 2xl:grid-cols-3 md:gap-[30px]"
+    >
+      <%- include('components/kreatorList.ejs') %> <%-
+      include('components/kreatorList.ejs') %> <%-
+      include('components/kreatorList.ejs') %> <%-
+      include('components/kreatorList.ejs') %> <%-
+      include('components/kreatorList.ejs') %> <%-
+      include('components/kreatorList.ejs') %> <%-
+      include('components/kreatorList.ejs') %> <%-
+      include('components/kreatorList.ejs') %> <%-
+      include('components/kreatorList.ejs') %>
+    </div>
+  </div>
+
+  <h2
+    class="pl-[40px] md:pl-[80px] lg:pl-[120px] mt-[120px] text-[24px] md:text-[30px] lg:text-[40px] 2xl:text-[48px] font-medium"
+  >
+    Kami Bekerja Sama dengan <br />
+    Perusahaan-perusahaan <span class="gradient-text3">Terkemuka Dunia</span>
+  </h2>
+  <!-- partnerships -->
 </div>
 <script src="/js/home.js"></script>

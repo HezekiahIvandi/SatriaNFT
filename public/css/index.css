@@ -70,7 +70,7 @@ li:hover {
 .cards-container {
   width: fit-content;
   flex-wrap: nowrap;
-  gap: 21px;
+  gap: 40px;
   animation: scroll 40s linear infinite;
 }
 /* .cards-container:hover {
