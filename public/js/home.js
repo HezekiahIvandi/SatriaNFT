@@ -1,11 +1,22 @@
 const cardsCon = document.querySelector(".cards-container");
 const content = Array.from(cardsCon.children);
-
+//duplicate slides child
 content.forEach((item) => {
   const duplicatedItem = item.cloneNode(true);
   duplicatedItem.setAttribute("aria-hidden", true);
   cardsCon.appendChild(duplicatedItem);
 });
+
+const autoplays = document.querySelectorAll(".autoplay");
+autoplays.forEach((autoplay) => {
+  const content = Array.from(autoplay.children);
+  content.forEach((item) => {
+    const duplicatedItem = item.cloneNode(true);
+    duplicatedItem.setAttribute("aria-hidden", true);
+    autoplay.appendChild(duplicatedItem);
+  });
+});
+//duplicate autoplay child
 
 //onscroll animation
 const observer = new IntersectionObserver((entries) => {

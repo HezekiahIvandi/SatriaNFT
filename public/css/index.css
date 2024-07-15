@@ -87,7 +87,25 @@ li:hover {
     transform: translate(-50%);
   }
 }
+@keyframes scrollRight {
+  to {
+    transform: translate(50%);
+  }
+}
 
+/* autoplay styles */
+.autoplay-container {
+  overflow: hidden;
+  background-color: #0c1033;
+}
+
+.autoplay-animate-left {
+  animation: scroll 10s linear infinite;
+}
+.autoplay-animate-right {
+  animation: scrollRight 10s linear infinite;
+  transform: translateX(-50%);
+}
 /* carousel styles */
 #wrapper {
 }
