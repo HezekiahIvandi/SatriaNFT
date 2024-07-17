@@ -1,6 +1,7 @@
 <!-- sticky w-[100%] z-[99] top-0 -->
 <nav
-  class="relative px-[40px] md:px-[80px] lg:px-[120px] py-[30px] flex justify-between items-center border-b-[#879CB5] border-b-[1px] bg-[#0c1033]"
+  id="navbar"
+  class="sticky w-[100%] z-[99] top-0 px-[40px] md:px-[80px] lg:px-[120px] py-[30px] flex justify-between items-center border-b-[#879CB5] border-b-[1px] bg-[#0c1033]"
 >
   <img
     src="assets/Logo.png"
@@ -42,7 +43,14 @@
       <li><a href="/market">Pasar NFTs</a></li>
       <li><a href="/carakerja">Cara Kerja</a></li>
       <li><a href="/about">Tentang Kami</a></li>
-
+      <li>
+        <button
+          id="hubungkan-wallet-mobile"
+          class="font-semibold text-start text-[#879cb5] hover:text-[white]"
+        >
+          Hubungkan Wallet
+        </button>
+      </li>
       <button
         id="mobile-menu-close"
         class="absolute top-[30px] right-[40px] aspect-square w-[2rem] z-[101]"
@@ -57,7 +65,7 @@
 <!-- popups -->
 <div
   id="popup-1"
-  class="w-[450px] rounded-[15px] bg-[#121640] fixed top-[25%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-[100] py-[10px]"
+  class="w-[350px] md:w-[450px] rounded-[15px] bg-[#121640] fixed top-[25%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-[100] py-[10px]"
 >
   <div
     class="flex justify-between px-[20px] py-[10px] border-b-[solid] border-b-[grey] border-b-[1px]"
@@ -68,40 +76,62 @@
     </button>
   </div>
 
-  <div id="popup-inner-container" class="px-[30px] py-[20px]">
+  <div id="popup-inner-container" class="px-[10px] md:px-[30px] py-[20px]">
     <div class="flex justify-between mb-[25px]">
       <h3 class="text-[16px]">Pilih Wallet</h3>
       <button><img src="assets/up.png" alt="" class="w-[24px]" /></button>
     </div>
-    <div class="flex justify-between flex-wrap gap-[20px]">
+    <div
+      class="justify-center flex md:justify-between flex-wrap gap-[10px] md:gap-[20px]"
+    >
       <button
         class="wallet-button flex flex-col justify-center items-center gap-[10px]"
       >
-        <img src="assets/wallet/1.png" alt="" class="h-[36px] wallet-image" />
+        <img
+          src="assets/wallet/1.png"
+          alt=""
+          class="h-fit max-h-[60px] md:h-[36px] wallet-image"
+        />
         <p class="text-[16px] text-center wallet-text">Metamask</p>
       </button>
       <button
         class="wallet-button flex flex-col justify-center items-center gap-[10px]"
       >
-        <img src="assets/wallet/2.png" alt="" class="h-[36px] wallet-image" />
+        <img
+          src="assets/wallet/2.png"
+          alt=""
+          class="h-fit max-h-[60px] md:h-[36px] wallet-image"
+        />
         <p class="text-[16px] text-center wallet-text">Exodus</p>
       </button>
       <button
         class="wallet-button flex flex-col justify-center items-center gap-[10px]"
       >
-        <img src="assets/wallet/3.png" alt="" class="h-[36px] wallet-image" />
+        <img
+          src="assets/wallet/3.png"
+          alt=""
+          class="h-fit max-h-[60px] md:h-[36px] wallet-image"
+        />
         <p class="text-[16px] text-center wallet-text">Coinbase</p>
       </button>
       <button
         class="wallet-button flex flex-col justify-center items-center gap-[10px]"
       >
-        <img src="assets/wallet/4.png" alt="" class="h-[36px] wallet-image" />
+        <img
+          src="assets/wallet/4.png"
+          alt=""
+          class="h-fit max-h-[60px] md:h-[36px] wallet-image"
+        />
         <p class="text-[16px] text-center wallet-text">Argent</p>
       </button>
       <button
         class="wallet-button flex flex-col justify-center items-center gap-[10px]"
       >
-        <img src="assets/wallet/5.png" alt="" class="h-[36px] wallet-image" />
+        <img
+          src="assets/wallet/5.png"
+          alt=""
+          class="h-fit max-h-[60px] md:h-[36px] wallet-image"
+        />
         <p class="text-[16px] text-center wallet-text">ImToken</p>
       </button>
     </div>
@@ -111,5 +141,3 @@
     </div>
   </div>
 </div>
-
-<script src="/js/navbar.js"></script>

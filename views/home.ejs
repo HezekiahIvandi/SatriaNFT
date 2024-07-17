@@ -1,276 +1,330 @@
-<!-- Hero section -->
-<div class="relative mt-[100px]">
-  <!-- Slide -->
-  <div class="slide">
-    <div class="cards-container flex">
-      <% cardsInfo.forEach(cardInfo => { %> <%- include('./components/card.ejs',
-      { imageUrl: cardInfo.imageUrl, time:cardInfo.time, title: cardInfo.title,
-      rupiah: cardInfo.rupiah, price: cardInfo.price, volatility:
-      cardInfo.volatility,up: cardInfo.up }) %> <% }); %>
-    </div>
-  </div>
-
-  <!-- Absolute text -->
-  <div
-    class="absolute pl-[40px] pr-[40px] md:pr-[20px] md:pl-[80px] lg:pl-[120px] left-[0px] top-[-40px] w-[fit-content] md:w-[661px] 2xl:w-[788px] z-[10] text-white bg-transparent backdrop-blur-[3px]"
-  >
-    <h1
-      class="text-[32px] md:text-[48px] lg:text-[64px] 2xl:text-[72px] font-medium leading-tight"
-    >
-      Jelajahi Era Baru <br />NFTs
-      <span class="gradient-text font-semibold">yang Abadi</span>
-      <br />
-      dari Tanah Air
-    </h1>
-    <p class="mt-[40px] mb-[40px] text-[12px] md:text-[16px] 2xl:text-[20px]">
-      SatriaNFT, pasar NFTs karya anak bangsa terdepan di Ethereum. Rumah bagi
-      generasi baru pencipta digital untuk mengekspresikan imajinasi. Temukan
-      koleksi NFT yang tak tertandingi, eksklusif di SatriaNFT.
-    </p>
-    <div class="text-[12px] md:text-[16px] 2xl:text-[20px]">
-      <button
-        class="font-semibold rounded-[8px] w-[120px] md:w-[165px] 2xl:w-[239px] 2xl:h-[70px] px-[8px] md:px-[15px] py-[12px] bg-[#00229C] hover:bg-[#2046cc] ease-in-out duration-75"
-      >
-        Mulai Sekarang
-      </button>
-      <button
-        class="animate-pulse rounded-[8px] neon-btn2 font-semibold w-[120px] md:w-[150px] 2xl:w-[239px] 2xl:h-[70px] ml-[1rem] px-[30px] py-[12px] 2xl:py-[18px] bg-[#313860] hover:bg-[#4a5281] ease-in-out duration-75"
-      >
-        Buat NFTs
-      </button>
-    </div>
-
-    <div class="flex justify-between w-[300px] md:w-[429px] mt-[20px]">
-      <div class="">
-        <h2
-          class="text-[24px] md:text-[32px] 2xl:text-[36px] font-semibold text-center"
-        >
-          827K+
-        </h2>
-        <p class="text-white mt-[10px] text-center 2xl:text-[20px]">Koleksi</p>
-      </div>
-      <div class="">
-        <h2
-          class="text-[24px] md:text-[32px] 2xl:text-[36px] font-semibold text-center"
-        >
-          400K+
-        </h2>
-        <p class="text-white mt-[10px] text-center 2xl:text-[20px]">Kreator</p>
-      </div>
-      <div class="">
-        <h2
-          class="text-[24px] md:text-[32px] 2xl:text-[36px] font-semibold text-center"
-        >
-          20K+
-        </h2>
-        <p class="text-white mt-[10px] text-center 2xl:text-[20px]">
-          Komunitas
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- section 2 -->
-<div class="mt-[80px] lg:mt-[240px] 2xl:mt-[120px]">
-  <h2
-    class="text-[24px] md:text-[30px] lg:text-[40px] 2xl:text-[48px] text-center mt-[80px] mb-[40px]"
-  >
-    <span class="gradient-text3 font-bold">NFTs Terkini</span>
-    <span class="animate-pulse duration-75">🔥</span>
-  </h2>
-  <!-- carousel nfts terkini -->
-  <div id="wrapper" class="relative">
-    <div class="carousel">
-      <div class="carousel-container flex w-fit gap-[40px]">
+<div id="home">
+  <!-- Hero section -->
+  <div class="relative mt-[100px]">
+    <!-- Slide -->
+    <div class="slide">
+      <div class="cards-container flex">
         <% cardsInfo.forEach(cardInfo => { %> <%-
         include('./components/card.ejs', { imageUrl: cardInfo.imageUrl,
         time:cardInfo.time, title: cardInfo.title, rupiah: cardInfo.rupiah,
-        price: cardInfo.price,volatility: cardInfo.volatility, up: cardInfo.up
+        price: cardInfo.price, volatility: cardInfo.volatility,up: cardInfo.up
         }) %> <% }); %>
       </div>
-
-      <!-- arrow buttons -->
-      <button class="absolute top-[45%] left-[4rem] z-[51]" id="prev">
-        <img src="assets/cards/left-arrow.png" alt="" class="w-[70px]" />
-      </button>
-      <button class="absolute top-[45%] right-[4rem] z-[51]" id="next">
-        <img src="assets/cards/right-arrow.png" alt="" class="w-[70px]" />
-      </button>
     </div>
 
-    <div class="flex justify-center items-center mt-[40px]">
-      <button
-        class="border-[1px] px-[24px] py-[16px] border-solid border-[#4639FA] rounded-[8px] text-[16px] 2xl:text-[24px] text-center hover:bg-[#4639FA] duration-75 ease-in-out"
-      >
-        Lihat semua
-      </button>
-    </div>
-  </div>
-
-  <h2 class="text-center text-[24px] md:text-[36px] lg:text-[48px] mt-[120px]">
-    Cara Kerja <span class="gradient-text2 font-bold">SatriaNFT</span>
-  </h2>
-
-  <!-- Langkah Buttons -->
-  <div
-    id="langkah-button-container"
-    class="flex flex-wrap justify-evenly gap-[20px] md:justify-between lg:gap-[40px] mt-[40px] px-[40px] md:px-[80px] lg:px-[120px]"
-  >
-    <%- include('./components/langkahButton.ejs', {imgUrl:
-    "assets/langkah/1.png", langkah: "LANGKAH 1", title: "Hubungkan Wallet"}) %>
-    <%- include('./components/langkahButton.ejs', {imgUrl:
-    "assets/langkah/2.png", langkah: "LANGKAH 2", title: "Jelajahi NFTs"}) %>
-    <%- include('./components/langkahButton.ejs', {imgUrl:
-    "assets/langkah/3.png", langkah: "LANGKAH 3", title: "Pembayaran"}) %> <%-
-    include('./components/langkahButton.ejs', {imgUrl: "assets/langkah/4.png",
-    langkah: "LANGKAH 4", title: "Terima NFTs Anda"}) %>
-  </div>
-
-  <h2
-    class="text-[20px] md:text-[30px] lg:text-[40px] 2xl:text-[48px] pl-[40px] md:pl-[80px] lg:pl-[120px] mt-[60px] mb-[40px]"
-  >
-    Hubungkan Wallet
-  </h2>
-  <!-- Wallet option buttons -->
-  <div
-    class="px-[40px] md:px-[80px] lg:px-[120px] flex flex-wrap justify-evenly md:justify-between gap-[10px] md:gap-[20px]"
-  >
-    <%- include('./components/walletButton.ejs',{ imgUrl: "assets/wallet/1.png",
-    title: "Metamask" }) %> <%- include('./components/walletButton.ejs',{
-    imgUrl: "assets/wallet/2.png", title: "Exodus" }) %> <%-
-    include('./components/walletButton.ejs',{ imgUrl: "assets/wallet/3.png",
-    title: "Coinbase" }) %> <%- include('./components/walletButton.ejs',{
-    imgUrl: "assets/wallet/4.png", title: "Argent" }) %> <%-
-    include('./components/walletButton.ejs',{ imgUrl: "assets/wallet/5.png",
-    title: "imToken" }) %>
-  </div>
-
-  <h2
-    class="text-[20px] md:text-[30px] lg:text-[40px] 2xl:text-[48px] pl-[40px] md:pl-[80px] lg:pl-[120px] mt-[30px] mb-[20px]"
-  >
-    Jelajahi NFTs
-  </h2>
-  <!-- NFTs terkini -->
-  <div class="px-[40px] md:px-[80px] lg:px-[120px]">
-    <div class="flex justify-start lg:justify-between flex-wrap gap-[10px]">
-      <%- include('./components/categoryButton.ejs', {text: "Koleksi"}) %> <%-
-      include('./components/categoryButton.ejs', {text: "Ilustrasi"}) %> <%-
-      include('./components/categoryButton.ejs', {text: "Lukisan"}) %> <%-
-      include('./components/categoryButton.ejs', {text: "Olahraga"}) %> <%-
-      include('./components/categoryButton.ejs', {text: "Musik & Audio"}) %> <%-
-      include('./components/categoryButton.ejs', {text: "Video"}) %> <%-
-      include('./components/categoryButton.ejs', {text: "Animasi"}) %>
-    </div>
+    <!-- Absolute text -->
     <div
-      class="flex flex-nowrap overflow-auto md:overflow-hidden md:grid md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-[25px] mt-[40px]"
+      class="absolute pl-[40px] pr-[40px] md:pr-[20px] md:pl-[80px] lg:pl-[120px] left-[0px] top-[-40px] w-[fit-content] md:w-[661px] 2xl:w-[788px] z-[10] text-white bg-transparent backdrop-blur-[3px]"
     >
-      <% cardsInfo.forEach(cardInfo => { %> <%- include('./components/card.ejs',
-      { imageUrl: cardInfo.imageUrl, time:cardInfo.time, title: cardInfo.title,
-      rupiah: cardInfo.rupiah, price: cardInfo.price,volatility:
-      cardInfo.volatility, up: cardInfo.up }) %> <% }); %>
-    </div>
-    <div class="flex justify-center items-center mt-[40px]">
-      <button
-        class="border-[1px] px-[24px] py-[16px] border-solid border-[#4639FA] rounded-[8px] text-[16px] 2xl:text-[24px] text-center hover:bg-[#4639FA] duration-75 ease-in-out"
+      <h1
+        class="text-[32px] md:text-[48px] lg:text-[64px] 2xl:text-[72px] font-medium leading-tight"
       >
-        Lihat semua
-      </button>
-    </div>
-  </div>
-
-  <h2
-    class="text-[24px] md:text-[30px] lg:text-[40px] 2xl:text-[48px] text-center mt-[120px] mb-[40px]"
-  >
-    <span class="gradient-text3 font-bold">Top 9 Kreator Terkini </span>
-    <span>🥇</span>
-  </h2>
-  <!-- top Kreator -->
-  <div class="overflow-auto">
-    <div
-      class="px-[40px] md:px-[80px] lg:px-[120px] w-fit items-center flex flex-nowrap overflow-hidden gap-[20px] md:flex-col md:justify-center lg:grid lg:grid-cols-2 2xl:grid-cols-3 md:gap-[30px]"
-    >
-      <%- include('components/kreatorList.ejs') %> <%-
-      include('components/kreatorList.ejs') %> <%-
-      include('components/kreatorList.ejs') %> <%-
-      include('components/kreatorList.ejs') %> <%-
-      include('components/kreatorList.ejs') %> <%-
-      include('components/kreatorList.ejs') %> <%-
-      include('components/kreatorList.ejs') %> <%-
-      include('components/kreatorList.ejs') %> <%-
-      include('components/kreatorList.ejs') %>
-    </div>
-  </div>
-
-  <h2
-    class="text-center pl-[40px] md:pl-[80px] lg:pl-[120px] mt-[120px] text-[24px] md:text-[30px] lg:text-[40px] 2xl:text-[48px] font-medium mb-[80px]"
-  >
-    Kami Bekerja Sama dengan <br />
-    Perusahaan-perusahaan
-    <span class="gradient-text3 font-semibold">Terkemuka Dunia</span>
-  </h2>
-  <!-- partnerships -->
-  <div class="partnerships relative flex flex-col gap-[40px] mb-[120px]">
-    <div class="autoplay-container">
-      <div
-        class="autoplay flex flex-nowrap gap-[20px] w-fit autoplay-animate-left"
-      >
-        <!-- autoplay 1 -->
-        <img src="assets/Partnerships/1/IMG.png" alt="" class="w-[250px]" />
-        <img src="assets/Partnerships/1/IMG-1.png" alt="" class="w-[250px]" />
-        <img src="assets/Partnerships/1/IMG-2.png" alt="" class="w-[250px]" />
-        <img src="assets/Partnerships/1/IMG-3.png" alt="" class="w-[250px]" />
-        <img src="assets/Partnerships/1/IMG-4.png" alt="" class="w-[250px]" />
-        <img src="assets/Partnerships/1/IMG-5.png" alt="" class="w-[250px]" />
-        <img src="assets/Partnerships/1/IMG-6.png" alt="" class="w-[250px]" />
-        <img src="assets/Partnerships/1/IMG-7.png" alt="" class="w-[250px]" />
-        <img src="assets/Partnerships/1/IMG-8.png" alt="" class="w-[250px]" />
-        <img src="assets/Partnerships/1/IMG-9.png" alt="" class="w-[250px]" />
+        Jelajahi Era Baru <br />NFTs
+        <span class="gradient-text font-semibold">yang Abadi</span>
+        <br />
+        dari Tanah Air
+      </h1>
+      <p class="mt-[40px] mb-[40px] text-[12px] md:text-[16px] 2xl:text-[20px]">
+        SatriaNFT, pasar NFTs karya anak bangsa terdepan di Ethereum. Rumah bagi
+        generasi baru pencipta digital untuk mengekspresikan imajinasi. Temukan
+        koleksi NFT yang tak tertandingi, eksklusif di SatriaNFT.
+      </p>
+      <div class="text-[12px] md:text-[16px] 2xl:text-[20px]">
+        <button
+          class="font-semibold rounded-[8px] w-[120px] md:w-[165px] 2xl:w-[239px] 2xl:h-[70px] px-[8px] md:px-[15px] py-[12px] bg-[#00229C] hover:bg-[#2046cc] ease-in-out duration-75"
+        >
+          Mulai Sekarang
+        </button>
+        <button
+          class="animate-pulse rounded-[8px] neon-btn2 font-semibold w-[120px] md:w-[150px] 2xl:w-[239px] 2xl:h-[70px] ml-[1rem] px-[30px] py-[12px] 2xl:py-[18px] bg-[#313860] hover:bg-[#4a5281] ease-in-out duration-75"
+        >
+          Buat NFTs
+        </button>
       </div>
-    </div>
-    <div class="autoplay-container">
-      <div
-        class="autoplay flex flex-nowrap gap-[20px] w-fit autoplay-animate-right"
-      >
-        <!-- autoplay 1 -->
-        <img src="assets/Partnerships/1/IMG.png" alt="" class="w-[250px]" />
-        <img src="assets/Partnerships/1/IMG-1.png" alt="" class="w-[250px]" />
-        <img src="assets/Partnerships/1/IMG-2.png" alt="" class="w-[250px]" />
-        <img src="assets/Partnerships/1/IMG-3.png" alt="" class="w-[250px]" />
-        <img src="assets/Partnerships/1/IMG-4.png" alt="" class="w-[250px]" />
-        <img src="assets/Partnerships/1/IMG-5.png" alt="" class="w-[250px]" />
-        <img src="assets/Partnerships/1/IMG-6.png" alt="" class="w-[250px]" />
-        <img src="assets/Partnerships/1/IMG-7.png" alt="" class="w-[250px]" />
-        <img src="assets/Partnerships/1/IMG-8.png" alt="" class="w-[250px]" />
-        <img src="assets/Partnerships/1/IMG-9.png" alt="" class="w-[250px]" />
-      </div>
-    </div>
-    <div class="autoplay-container">
-      <div
-        class="autoplay flex flex-nowrap gap-[20px] w-fit autoplay-animate-left"
-      >
-        <!-- autoplay 1 -->
-        <img src="assets/Partnerships/1/IMG.png" alt="" class="w-[250px]" />
-        <img src="assets/Partnerships/1/IMG-1.png" alt="" class="w-[250px]" />
-        <img src="assets/Partnerships/1/IMG-2.png" alt="" class="w-[250px]" />
-        <img src="assets/Partnerships/1/IMG-3.png" alt="" class="w-[250px]" />
-        <img src="assets/Partnerships/1/IMG-4.png" alt="" class="w-[250px]" />
-        <img src="assets/Partnerships/1/IMG-5.png" alt="" class="w-[250px]" />
-        <img src="assets/Partnerships/1/IMG-6.png" alt="" class="w-[250px]" />
-        <img src="assets/Partnerships/1/IMG-7.png" alt="" class="w-[250px]" />
-        <img src="assets/Partnerships/1/IMG-8.png" alt="" class="w-[250px]" />
-        <img src="assets/Partnerships/1/IMG-9.png" alt="" class="w-[250px]" />
+
+      <div class="flex justify-between w-[300px] md:w-[429px] mt-[20px]">
+        <div class="">
+          <h2
+            class="text-[24px] md:text-[32px] 2xl:text-[36px] font-semibold text-center"
+          >
+            827K+
+          </h2>
+          <p class="text-white mt-[10px] text-center 2xl:text-[20px]">
+            Koleksi
+          </p>
+        </div>
+        <div class="">
+          <h2
+            class="text-[24px] md:text-[32px] 2xl:text-[36px] font-semibold text-center"
+          >
+            400K+
+          </h2>
+          <p class="text-white mt-[10px] text-center 2xl:text-[20px]">
+            Kreator
+          </p>
+        </div>
+        <div class="">
+          <h2
+            class="text-[24px] md:text-[32px] 2xl:text-[36px] font-semibold text-center"
+          >
+            20K+
+          </h2>
+          <p class="text-white mt-[10px] text-center 2xl:text-[20px]">
+            Komunitas
+          </p>
+        </div>
       </div>
     </div>
 
+    <!-- ornament -->
     <img
-      src="assets/Partnerships/Ellipse-Partnership.png"
+      src="assets/ornament/1.png"
       alt=""
-      class="w-[100%] h-[auto] absolute top-[-5rem] md:top-[-10rem] lg:top-[-15rem] 2xl:top-[-40rem] z-[-10]"
+      class="absolute max-w-[380px] top-[-30%] right-[5%] md:right-[10%] lg:right-[25%] 2xl:right-[25%] rotate-[-40deg]"
+    />
+    <img
+      src="assets/ornament/2.png"
+      alt=""
+      class="absolute max-w-[380px] bottom-[-20%] right-[-5%] md:right-[0%] lg:right-[5%] 2xl:right-[10%] rotate-[120deg]"
     />
   </div>
 
-  <!-- footer -->
-  <%- include('components/footer.ejs') %>
+  <!-- section 2 -->
+  <div id="home" class="mt-[80px] lg:mt-[240px] 2xl:mt-[120px]">
+    <h2
+      class="text-[24px] md:text-[30px] lg:text-[40px] 2xl:text-[48px] text-center mt-[80px] mb-[40px]"
+    >
+      <span class="gradient-text3 font-bold">NFTs Terkini</span>
+      <span class="animate-pulse duration-75">🔥</span>
+    </h2>
+    <!-- carousel nfts terkini -->
+    <div id="wrapper" class="relative">
+      <div class="carousel">
+        <div class="carousel-container flex w-fit gap-[40px]">
+          <% cardsInfo.forEach(cardInfo => { %> <%-
+          include('./components/card.ejs', { imageUrl: cardInfo.imageUrl,
+          time:cardInfo.time, title: cardInfo.title, rupiah: cardInfo.rupiah,
+          price: cardInfo.price,volatility: cardInfo.volatility, up: cardInfo.up
+          }) %> <% }); %>
+        </div>
+
+        <!-- arrow buttons -->
+        <button class="absolute top-[45%] left-[4rem] z-[51]" id="prev">
+          <img src="assets/cards/left-arrow.png" alt="" class="w-[70px]" />
+        </button>
+        <button class="absolute top-[45%] right-[4rem] z-[51]" id="next">
+          <img src="assets/cards/right-arrow.png" alt="" class="w-[70px]" />
+        </button>
+      </div>
+
+      <div class="flex justify-center items-center mt-[40px]">
+        <button
+          class="border-[1px] px-[24px] py-[16px] border-solid border-[#4639FA] rounded-[8px] text-[16px] 2xl:text-[24px] text-center hover:bg-[#4639FA] duration-75 ease-in-out"
+        >
+          Lihat semua
+        </button>
+      </div>
+
+      <!-- ornament -->
+      <img
+        id="ornament-3"
+        src="assets/ornament/3.png"
+        alt=""
+        class="w-full max-w-[2000px] max-h-[900px] z-[-11] hidden md:inline absolute top-[-30%] 2xl:top-[-10%]"
+      />
+    </div>
+
+    <h2
+      class="text-center text-[24px] md:text-[36px] lg:text-[48px] mt-[120px]"
+    >
+      Cara Kerja <span class="gradient-text2 font-bold">SatriaNFT</span>
+    </h2>
+
+    <!-- Langkah Buttons -->
+    <div
+      id="langkah-button-container"
+      class="flex flex-wrap justify-evenly gap-[20px] md:justify-between lg:gap-[40px] mt-[40px] px-[40px] md:px-[80px] lg:px-[120px]"
+    >
+      <%- include('./components/langkahButton.ejs', {imgUrl:
+      "assets/langkah/1.png", langkah: "LANGKAH 1", title: "Hubungkan Wallet"})
+      %> <%- include('./components/langkahButton.ejs', {imgUrl:
+      "assets/langkah/2.png", langkah: "LANGKAH 2", title: "Jelajahi NFTs"}) %>
+      <%- include('./components/langkahButton.ejs', {imgUrl:
+      "assets/langkah/3.png", langkah: "LANGKAH 3", title: "Pembayaran"}) %> <%-
+      include('./components/langkahButton.ejs', {imgUrl: "assets/langkah/4.png",
+      langkah: "LANGKAH 4", title: "Terima NFTs Anda"}) %>
+    </div>
+
+    <h2
+      class="text-[20px] md:text-[30px] lg:text-[40px] 2xl:text-[48px] pl-[40px] md:pl-[80px] lg:pl-[120px] mt-[60px] mb-[40px]"
+    >
+      Hubungkan Wallet
+    </h2>
+    <!-- Wallet option buttons -->
+    <div
+      class="px-[40px] md:px-[80px] lg:px-[120px] flex flex-wrap justify-evenly md:justify-between gap-[10px] md:gap-[20px]"
+    >
+      <%- include('./components/walletButton.ejs',{ imgUrl:
+      "assets/wallet/1.png", title: "Metamask" }) %> <%-
+      include('./components/walletButton.ejs',{ imgUrl: "assets/wallet/2.png",
+      title: "Exodus" }) %> <%- include('./components/walletButton.ejs',{
+      imgUrl: "assets/wallet/3.png", title: "Coinbase" }) %> <%-
+      include('./components/walletButton.ejs',{ imgUrl: "assets/wallet/4.png",
+      title: "Argent" }) %> <%- include('./components/walletButton.ejs',{
+      imgUrl: "assets/wallet/5.png", title: "imToken" }) %>
+    </div>
+
+    <h2
+      class="text-[20px] md:text-[30px] lg:text-[40px] 2xl:text-[48px] pl-[40px] md:pl-[80px] lg:pl-[120px] mt-[30px] mb-[20px]"
+    >
+      Jelajahi NFTs
+    </h2>
+    <!-- NFTs terkini -->
+    <div class="px-[40px] md:px-[80px] lg:px-[120px]">
+      <div
+        class="flex justify-start lg:justify-between flex-wrap gap-[10px] mb-[40px]"
+      >
+        <%- include('./components/categoryButton.ejs', {text: "Koleksi"}) %> <%-
+        include('./components/categoryButton.ejs', {text: "Ilustrasi"}) %> <%-
+        include('./components/categoryButton.ejs', {text: "Lukisan"}) %> <%-
+        include('./components/categoryButton.ejs', {text: "Olahraga"}) %> <%-
+        include('./components/categoryButton.ejs', {text: "Musik & Audio"}) %>
+        <%- include('./components/categoryButton.ejs', {text: "Video"}) %> <%-
+        include('./components/categoryButton.ejs', {text: "Animasi"}) %>
+      </div>
+
+      <div
+        id="jelajahi-container"
+        class="flex flex-nowrap overflow-auto md:overflow-hidden md:grid md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-[25px]"
+      >
+        <% JelajahiNFTs.forEach(nft => { %> <%- include('./components/nft.ejs',
+        { imageUrl: nft.imageUrl, title: nft.title, rupiah: nft.rupiah, price:
+        nft.price,volatility: nft.volatility, up: nft.up }) %> <% }); %>
+
+        <div id="extra-container" class="hidden">
+          <% ExtraJelajahiNFTs.forEach(nft => { %> <%-
+          include('./components/nft.ejs', { imageUrl: nft.imageUrl, title:
+          nft.title, rupiah: nft.rupiah, price: nft.price,volatility:
+          nft.volatility, up: nft.up }) %> <% }); %>
+        </div>
+      </div>
+      <div class="flex justify-center items-center mt-[40px]">
+        <button
+          id="extra-jelajahi-nft-btn"
+          class="border-[1px] px-[24px] py-[16px] border-solid border-[#4639FA] rounded-[8px] text-[16px] 2xl:text-[24px] text-center hover:bg-[#4639FA] duration-75 ease-in-out"
+        >
+          Lihat semua
+        </button>
+      </div>
+    </div>
+
+    <h2
+      class="text-[24px] md:text-[30px] lg:text-[40px] 2xl:text-[48px] text-center mt-[120px] mb-[40px]"
+    >
+      <span class="gradient-text3 font-bold">Top 9 Kreator Terkini </span>
+      <span>🥇</span>
+    </h2>
+    <!-- top Kreator -->
+    <div class="relative">
+      <div class="overflow-auto">
+        <div
+          class="px-[40px] md:px-[80px] lg:px-[120px] w-fit items-center flex flex-nowrap overflow-hidden gap-[20px] md:flex-col md:justify-center lg:grid lg:grid-cols-2 2xl:grid-cols-3 md:gap-[30px]"
+        >
+          <%- include('components/kreatorList.ejs') %> <%-
+          include('components/kreatorList.ejs') %> <%-
+          include('components/kreatorList.ejs') %> <%-
+          include('components/kreatorList.ejs') %> <%-
+          include('components/kreatorList.ejs') %> <%-
+          include('components/kreatorList.ejs') %> <%-
+          include('components/kreatorList.ejs') %> <%-
+          include('components/kreatorList.ejs') %> <%-
+          include('components/kreatorList.ejs') %>
+        </div>
+      </div>
+      <div class="flex justify-center items-center mt-[40px]">
+        <button
+          class="border-[1px] px-[24px] py-[16px] border-solid border-[#4639FA] rounded-[8px] text-[16px] 2xl:text-[24px] text-center hover:bg-[#4639FA] duration-75 ease-in-out"
+        >
+          <a href="/topkreator">Lihat semua</a>
+        </button>
+      </div>
+      <!-- ornament -->
+      <img
+        id="ornament-4"
+        src="assets/ornament/4.png"
+        alt=""
+        class="w-full max-w-[2000px] max-h-[1278px] z-[-11] absolute top-[-10%] md:top-[-20%] lg:top-[-40%] 2xl:top-[-70%]"
+      />
+    </div>
+    <h2
+      class="text-center pl-[40px] md:pl-[80px] lg:pl-[120px] mt-[120px] text-[24px] md:text-[30px] lg:text-[40px] 2xl:text-[48px] font-medium mb-[80px]"
+    >
+      Kami Bekerja Sama dengan <br />
+      Perusahaan-perusahaan
+      <span class="gradient-text3 font-semibold">Terkemuka Dunia</span>
+    </h2>
+    <!-- partnerships -->
+    <div class="partnerships relative flex flex-col gap-[40px] mb-[120px]">
+      <div class="autoplay-container">
+        <div
+          class="autoplay flex flex-nowrap gap-[20px] w-fit autoplay-animate-left"
+        >
+          <!-- autoplay 1 -->
+          <img src="assets/Partnerships/1/IMG.png" alt="" class="w-[250px]" />
+          <img src="assets/Partnerships/1/IMG-1.png" alt="" class="w-[250px]" />
+          <img src="assets/Partnerships/1/IMG-2.png" alt="" class="w-[250px]" />
+          <img src="assets/Partnerships/1/IMG-3.png" alt="" class="w-[250px]" />
+          <img src="assets/Partnerships/1/IMG-4.png" alt="" class="w-[250px]" />
+          <img src="assets/Partnerships/1/IMG-5.png" alt="" class="w-[250px]" />
+          <img src="assets/Partnerships/1/IMG-6.png" alt="" class="w-[250px]" />
+          <img src="assets/Partnerships/1/IMG-7.png" alt="" class="w-[250px]" />
+          <img src="assets/Partnerships/1/IMG-8.png" alt="" class="w-[250px]" />
+          <img src="assets/Partnerships/1/IMG-9.png" alt="" class="w-[250px]" />
+        </div>
+      </div>
+      <div class="autoplay-container">
+        <div
+          class="autoplay flex flex-nowrap gap-[20px] w-fit autoplay-animate-right"
+        >
+          <!-- autoplay 1 -->
+          <img src="assets/Partnerships/1/IMG.png" alt="" class="w-[250px]" />
+          <img src="assets/Partnerships/1/IMG-1.png" alt="" class="w-[250px]" />
+          <img src="assets/Partnerships/1/IMG-2.png" alt="" class="w-[250px]" />
+          <img src="assets/Partnerships/1/IMG-3.png" alt="" class="w-[250px]" />
+          <img src="assets/Partnerships/1/IMG-4.png" alt="" class="w-[250px]" />
+          <img src="assets/Partnerships/1/IMG-5.png" alt="" class="w-[250px]" />
+          <img src="assets/Partnerships/1/IMG-6.png" alt="" class="w-[250px]" />
+          <img src="assets/Partnerships/1/IMG-7.png" alt="" class="w-[250px]" />
+          <img src="assets/Partnerships/1/IMG-8.png" alt="" class="w-[250px]" />
+          <img src="assets/Partnerships/1/IMG-9.png" alt="" class="w-[250px]" />
+        </div>
+      </div>
+      <div class="autoplay-container">
+        <div
+          class="autoplay flex flex-nowrap gap-[20px] w-fit autoplay-animate-left"
+        >
+          <!-- autoplay 1 -->
+          <img src="assets/Partnerships/1/IMG.png" alt="" class="w-[250px]" />
+          <img src="assets/Partnerships/1/IMG-1.png" alt="" class="w-[250px]" />
+          <img src="assets/Partnerships/1/IMG-2.png" alt="" class="w-[250px]" />
+          <img src="assets/Partnerships/1/IMG-3.png" alt="" class="w-[250px]" />
+          <img src="assets/Partnerships/1/IMG-4.png" alt="" class="w-[250px]" />
+          <img src="assets/Partnerships/1/IMG-5.png" alt="" class="w-[250px]" />
+          <img src="assets/Partnerships/1/IMG-6.png" alt="" class="w-[250px]" />
+          <img src="assets/Partnerships/1/IMG-7.png" alt="" class="w-[250px]" />
+          <img src="assets/Partnerships/1/IMG-8.png" alt="" class="w-[250px]" />
+          <img src="assets/Partnerships/1/IMG-9.png" alt="" class="w-[250px]" />
+        </div>
+      </div>
+
+      <img
+        src="assets/Partnerships/Ellipse-Partnership.png"
+        alt=""
+        class="w-[100%] h-[auto] absolute top-[-5rem] md:top-[-10rem] lg:top-[-15rem] 2xl:top-[-40rem] z-[-10]"
+      />
+    </div>
+
+    <!-- footer -->
+    <%- include('components/footer.ejs') %>
+  </div>
 </div>
-<script src="/js/home.js"></script>

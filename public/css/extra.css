@@ -1,0 +1,68 @@
+#down-btn {
+  width: 26px;
+}
+#barcode-btn img {
+  height: 142px;
+}
+
+#detail-akun {
+  border: 3px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 30px 30px;
+}
+
+#gradient-circle {
+  height: 27px;
+}
+
+.detail-div {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.detail-div img {
+  height: 24px;
+}
+
+.detail-div p {
+  font-size: 14px;
+  color: #616161;
+}
+
+#lepas-btn {
+  padding: 20px 20px;
+  border: solid 1px #ca3131;
+  background-color: #ffe4e4;
+  color: #212121;
+  border-radius: 10px;
+}
+
+.barcode-div-1 img {
+  height: 36px;
+}
+.barcode-div-1 p {
+  font-size: 24px;
+}
+
+.blur-effect {
+  filter: blur(10px);
+  pointer-events: none;
+  user-select: none;
+}
+.card:hover .img-container img,
+.card:hover .time-btn {
+  filter: blur(10px);
+  pointer-events: none;
+  user-select: none;
+  transition: 0.5s ease-in-out;
+}
+
+.card:hover .ajukan-btn {
+  opacity: 1;
+  transition: 0.5s ease-in-out;
+}
+
+.jelajahi-extended {
+  background-color: #4639fa;
+}

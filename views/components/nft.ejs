@@ -1,0 +1,59 @@
+<div
+  class="card rounded-[18px] 2xl:rounded-[24px] w-[300px] 2xl:w-[400px] px-[1.5rem] py-[1.5rem] 2xl:py-[2rem] items-center"
+>
+  <div class="img-container relative">
+    <img src="<%= imageUrl %>" alt="" />
+
+    <button
+      class="ajukan-btn opacity-0 w-[200px] 2xl:w-[270px] px-[20px] 2x:px-[30px] py-[15px] text-[14px] 2xl-[text-20px] bg-[#4639FA] rounded-[8px] absolute bottom-1/2 left-1/2 transform -translate-x-1/2"
+    >
+      Ajukan Penawaran
+    </button>
+  </div>
+
+  <div>
+    <h3 class="text-[20px] 2xl:text-[24px] font-semibold mt-[20px]">
+      <%= title %>
+    </h3>
+    <p class="text-[#879CB5] text-[14px] 2xl:text-[16px]">Koleksi nusaNFT</p>
+  </div>
+
+  <div class="mt-[20px] flex justify-between items-center">
+    <div class="items-center">
+      <p class="text-[14px] text-[#15BFFD]">Tawaran saat ini</p>
+      <div class="flex items-center">
+        <span
+          ><img src="assets/cards/eth.png" alt="" class="w-[20px] mr-[5px]"
+        /></span>
+        <span class="text-[20px] text-[#15BFFD] font-extrabold"
+          ><%= price %></span
+        >
+        <span class="text-[20px] text-[#15BFFD] font-extrabold">ETH</span>
+      </div>
+    </div>
+    <div class="flex justify-between w-[120px] 2xl:w-[150px]">
+      <div>
+        <p class="text-[16px] 2xl:text-[20px]">
+          <span class="text-[16px] 2xl:text-[20px]">Rp.</span> <%= rupiah %>
+          <span class="text-[12px]">,00</span>
+        </p>
+
+        <% if (up == true) { %>
+        <div class="flex items-center justify-end">
+          <span
+            ><img src="assets/cards/green.png" alt="" class="w-[15px]" />
+          </span>
+          <h3 class="text-[16px] ml-[5px] text-[#24FF00]"><%= volatility %></h3>
+        </div>
+        <% } else { %>
+        <div class="flex items-center justify-end">
+          <span
+            ><img src="assets/cards/red.png" alt="" class="w-[15px]" />
+          </span>
+          <h3 class="text-[16px] ml-[5px] text-[#EB1414]"><%= volatility %></h3>
+        </div>
+        <% } %>
+      </div>
+    </div>
+  </div>
+</div>

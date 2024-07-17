@@ -82,3 +82,19 @@ setInterval(() => {
     carousel.scrollBy(scrollAmount, 0);
   }
 }, 6000);
+
+const extraJNFTs = document.getElementById("extra-jelajahi-nft");
+const extraBtn = document.getElementById("extra-jelajahi-nft-btn");
+const extraCon = document.getElementById("extra-container");
+const jelajahiCon = document.getElementById("jelajahi-container");
+let Resetjelajahi;
+extraBtn.addEventListener("click", () => {
+  if (!extraBtn.classList.contains("jelajahi-extended")) {
+    Resetjelajahi = jelajahiCon.innerHTML;
+    jelajahiCon.innerHTML += extraCon.innerHTML;
+    extraBtn.classList.toggle("jelajahi-extended");
+  } else {
+    jelajahiCon.innerHTML = Resetjelajahi;
+    extraBtn.classList.toggle("jelajahi-extended");
+  }
+});

@@ -1,9 +1,11 @@
 <div
   class="card rounded-[18px] 2xl:rounded-[24px] w-[300px] 2xl:w-[400px] px-[1.5rem] py-[1.5rem] 2xl:py-[2rem] items-center"
 >
-  <div class="relative">
+  <div class="img-container relative">
     <img src="<%= imageUrl %>" alt="" />
-    <div class="absolute bottom-[15px] left-1/2 transform -translate-x-1/2">
+    <div
+      class="time-btn absolute bottom-[15px] left-1/2 transform -translate-x-1/2"
+    >
       <div
         class="rounded-[16px] bg-[#0F182E] w-[192px] flex px-[3px] py-[7px] justify-center"
       >
@@ -11,6 +13,11 @@
         <span><%= time %></span>
       </div>
     </div>
+    <button
+      class="ajukan-btn opacity-0 w-[200px] 2xl:w-[270px] px-[20px] 2x:px-[30px] py-[15px] text-[14px] 2xl-[text-20px] bg-[#4639FA] rounded-[8px] absolute bottom-1/2 left-1/2 transform -translate-x-1/2"
+    >
+      Ajukan Penawaran
+    </button>
   </div>
 
   <div>
