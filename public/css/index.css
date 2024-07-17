@@ -9,6 +9,7 @@ body {
   background-color: #0c1033;
   color: white;
   /* overflow-x: hidden; */
+  position: relative;
 }
 
 h1,
@@ -313,6 +314,21 @@ li:hover {
   -webkit-text-fill-color: transparent;
 }
 
+/* popup styles */
+#popup-1 {
+  transform: translate(-50%, -50%);
+  transition: 0.5s;
+  visibility: hidden;
+  opacity: 0;
+}
+
+#popup-1.active {
+  top: 50%;
+  transition: 0.5s;
+  visibility: visible;
+  opacity: 1;
+}
+
 /* onscroll animation */
 
 .langkah-button,
@@ -421,3 +437,29 @@ li:hover {
 /* tablet 768px - 1024px */
 
 /* desktop (>1024px) */
+
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: 15px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  animation: l5 1s infinite linear alternate;
+}
+@keyframes l5 {
+  0% {
+    box-shadow: 20px 0 #d9d9d9, -20px 0 #0002;
+    background: #d9d9d9;
+  }
+  33% {
+    box-shadow: 20px 0 #d9d9d9, -20px 0 #0002;
+    background: #0002;
+  }
+  66% {
+    box-shadow: 20px 0 #0002, -20px 0 #d9d9d9;
+    background: #0002;
+  }
+  100% {
+    box-shadow: 20px 0 #0002, -20px 0 #d9d9d9;
+    background: #d9d9d9;
+  }
+}

@@ -9,15 +9,17 @@
   />
 
   <ul
-    class="hidden justify-between w-[50%] max-w-[595px] static bg-transparent p-0 text-[16px] text-[#879cb5] lg:flex 2xl:text-[20px]"
+    class="hidden justify-between w-[50%] max-w-[630px] static bg-transparent p-0 text-[16px] text-[#879cb5] lg:flex 2xl:text-[20px]"
   >
     <li class="current-page"><a href="/">Jelajahi</a></li>
     <li><a href="/market">Pasar NFTs</a></li>
     <li><a href="/carakerja">Cara Kerja</a></li>
-    <li><a href="/about">Tentang Kami</a></li>
+    <li><a href="/carakerja">Jual NFTs</a></li>
+    <li><a href="/about">Top Kreator</a></li>
   </ul>
 
   <button
+    id="hubungkan-wallet"
     class="neon-btn hidden text-[16px] font-semibold text-[#879cb5] hover:text-[white] py-[10px] px-[30px] lg:inline 2xl:w-[270px] 2xl:text-[20px] 2xl:py-[15px]"
   >
     Hubungkan Wallet
@@ -51,4 +53,63 @@
     </ul>
   </div>
 </nav>
+
+<!-- popups -->
+<div
+  id="popup-1"
+  class="w-[450px] rounded-[15px] bg-[#121640] fixed top-[25%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-[100] py-[10px]"
+>
+  <div
+    class="flex justify-between px-[20px] py-[10px] border-b-[solid] border-b-[grey] border-b-[1px]"
+  >
+    <h3 id="popup-title" class="text-[20px]">Hubungkan Wallet</h3>
+    <button id="wallet-close">
+      <img src="assets/popup-close.png" alt="" class="h-[30px]" />
+    </button>
+  </div>
+
+  <div id="popup-inner-container" class="px-[30px] py-[20px]">
+    <div class="flex justify-between mb-[25px]">
+      <h3 class="text-[16px]">Pilih Wallet</h3>
+      <button><img src="assets/up.png" alt="" class="w-[24px]" /></button>
+    </div>
+    <div class="flex justify-between flex-wrap gap-[20px]">
+      <button
+        class="wallet-button flex flex-col justify-center items-center gap-[10px]"
+      >
+        <img src="assets/wallet/1.png" alt="" class="h-[36px] wallet-image" />
+        <p class="text-[16px] text-center wallet-text">Metamask</p>
+      </button>
+      <button
+        class="wallet-button flex flex-col justify-center items-center gap-[10px]"
+      >
+        <img src="assets/wallet/2.png" alt="" class="h-[36px] wallet-image" />
+        <p class="text-[16px] text-center wallet-text">Exodus</p>
+      </button>
+      <button
+        class="wallet-button flex flex-col justify-center items-center gap-[10px]"
+      >
+        <img src="assets/wallet/3.png" alt="" class="h-[36px] wallet-image" />
+        <p class="text-[16px] text-center wallet-text">Coinbase</p>
+      </button>
+      <button
+        class="wallet-button flex flex-col justify-center items-center gap-[10px]"
+      >
+        <img src="assets/wallet/4.png" alt="" class="h-[36px] wallet-image" />
+        <p class="text-[16px] text-center wallet-text">Argent</p>
+      </button>
+      <button
+        class="wallet-button flex flex-col justify-center items-center gap-[10px]"
+      >
+        <img src="assets/wallet/5.png" alt="" class="h-[36px] wallet-image" />
+        <p class="text-[16px] text-center wallet-text">ImToken</p>
+      </button>
+    </div>
+    <div class="flex justify-between mt-[25px]">
+      <h3 class="text-[16px]">Pindai Barcode</h3>
+      <button><img src="assets/down.png" alt="" class="w-[24px]" /></button>
+    </div>
+  </div>
+</div>
+
 <script src="/js/navbar.js"></script>
