@@ -41,7 +41,7 @@ walletCloseBtn.addEventListener("click", closePopupWallet);
 const addEventWalletButton = () => {
   //wallet button
   // Select all buttons with the class 'wallet-button'
-  const buttons = document.querySelectorAll(".wallet-button");
+  const buttons = document.querySelectorAll(".wallet-buttons");
 
   // Iterate over each button and attach a click event listener
   buttons.forEach((button) => {
