@@ -230,15 +230,10 @@
         <div
           class="px-[40px] md:px-[80px] lg:px-[120px] w-fit items-center flex flex-nowrap overflow-hidden gap-[20px] md:flex-col md:justify-center lg:grid lg:grid-cols-2 2xl:grid-cols-3 md:gap-[30px]"
         >
-          <%- include('components/kreatorList.ejs') %> <%-
-          include('components/kreatorList.ejs') %> <%-
-          include('components/kreatorList.ejs') %> <%-
-          include('components/kreatorList.ejs') %> <%-
-          include('components/kreatorList.ejs') %> <%-
-          include('components/kreatorList.ejs') %> <%-
-          include('components/kreatorList.ejs') %> <%-
-          include('components/kreatorList.ejs') %> <%-
-          include('components/kreatorList.ejs') %>
+          <% kreatorInfo.forEach((info, index)=> { %> <%-
+          include('./components/kreatorList.ejs', {index: index+1, imageUrl:
+          info.imageUrl, kreator: info.kreator, price: info.price,volatility:
+          info.volatility, up: info.up }) %> <% }); %>
         </div>
       </div>
       <div class="flex justify-center items-center mt-[40px]">
@@ -287,16 +282,14 @@
           class="autoplay flex flex-nowrap gap-[20px] w-fit autoplay-animate-right"
         >
           <!-- autoplay 1 -->
-          <img src="assets/Partnerships/1/IMG.png" alt="" class="w-[250px]" />
-          <img src="assets/Partnerships/1/IMG-1.png" alt="" class="w-[250px]" />
-          <img src="assets/Partnerships/1/IMG-2.png" alt="" class="w-[250px]" />
-          <img src="assets/Partnerships/1/IMG-3.png" alt="" class="w-[250px]" />
-          <img src="assets/Partnerships/1/IMG-4.png" alt="" class="w-[250px]" />
-          <img src="assets/Partnerships/1/IMG-5.png" alt="" class="w-[250px]" />
-          <img src="assets/Partnerships/1/IMG-6.png" alt="" class="w-[250px]" />
-          <img src="assets/Partnerships/1/IMG-7.png" alt="" class="w-[250px]" />
-          <img src="assets/Partnerships/1/IMG-8.png" alt="" class="w-[250px]" />
-          <img src="assets/Partnerships/1/IMG-9.png" alt="" class="w-[250px]" />
+          <img src="assets/Partnerships/2/IMG.png" alt="" class="w-[250px]" />
+          <img src="assets/Partnerships/2/IMG-1.png" alt="" class="w-[250px]" />
+          <img src="assets/Partnerships/2/IMG-2.png" alt="" class="w-[250px]" />
+          <img src="assets/Partnerships/2/IMG-3.png" alt="" class="w-[250px]" />
+          <img src="assets/Partnerships/2/IMG-4.png" alt="" class="w-[250px]" />
+          <img src="assets/Partnerships/2/IMG-5.png" alt="" class="w-[250px]" />
+          <img src="assets/Partnerships/2/IMG-6.png" alt="" class="w-[250px]" />
+          <img src="assets/Partnerships/2/IMG-7.png" alt="" class="w-[250px]" />
         </div>
       </div>
       <div class="autoplay-container">
@@ -304,16 +297,16 @@
           class="autoplay flex flex-nowrap gap-[20px] w-fit autoplay-animate-left"
         >
           <!-- autoplay 1 -->
-          <img src="assets/Partnerships/1/IMG.png" alt="" class="w-[250px]" />
-          <img src="assets/Partnerships/1/IMG-1.png" alt="" class="w-[250px]" />
-          <img src="assets/Partnerships/1/IMG-2.png" alt="" class="w-[250px]" />
-          <img src="assets/Partnerships/1/IMG-3.png" alt="" class="w-[250px]" />
-          <img src="assets/Partnerships/1/IMG-4.png" alt="" class="w-[250px]" />
-          <img src="assets/Partnerships/1/IMG-5.png" alt="" class="w-[250px]" />
-          <img src="assets/Partnerships/1/IMG-6.png" alt="" class="w-[250px]" />
-          <img src="assets/Partnerships/1/IMG-7.png" alt="" class="w-[250px]" />
-          <img src="assets/Partnerships/1/IMG-8.png" alt="" class="w-[250px]" />
-          <img src="assets/Partnerships/1/IMG-9.png" alt="" class="w-[250px]" />
+          <img src="assets/Partnerships/3/IMG.png" alt="" class="w-[250px]" />
+          <img src="assets/Partnerships/3/IMG-1.png" alt="" class="w-[250px]" />
+          <img src="assets/Partnerships/3/IMG-2.png" alt="" class="w-[250px]" />
+          <img src="assets/Partnerships/3/IMG-3.png" alt="" class="w-[250px]" />
+          <img src="assets/Partnerships/3/IMG-4.png" alt="" class="w-[250px]" />
+          <img src="assets/Partnerships/3/IMG-5.png" alt="" class="w-[250px]" />
+          <img src="assets/Partnerships/3/IMG-6.png" alt="" class="w-[250px]" />
+          <img src="assets/Partnerships/3/IMG-7.png" alt="" class="w-[250px]" />
+          <img src="assets/Partnerships/3/IMG-8.png" alt="" class="w-[250px]" />
+          <img src="assets/Partnerships/3/IMG-9.png" alt="" class="w-[250px]" />
         </div>
       </div>
 
@@ -325,6 +318,6 @@
     </div>
 
     <!-- footer -->
-    <%- include('components/footer.ejs') %>
+    <%- include('components/footer.html') %>
   </div>
 </div>

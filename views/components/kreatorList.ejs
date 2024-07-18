@@ -1,33 +1,31 @@
 <div
   class="w-[534px] px-[20px] py-[20px] rounded-[8px] flex justify-between border-[1px] border-solid border-[#1286B0] items-center"
 >
-  <h2 class="text-[20px] md:text-[24px] 2xl:text-[36px]">1</h2>
-  <img
-    src="assets/kreator/1.png"
-    alt=""
-    class="aspect-square w-[100px] mr-[10px]"
-  />
+  <h2 class="text-[20px] md:text-[24px] 2xl:text-[36px]"><%= index %></h2>
+  <img src="<%= imageUrl %>" alt="" class="aspect-square w-[100px] mr-[10px]" />
   <div class="flex flex-col items-center justify-center">
-    <h2 class="text-[20px] md:text-[24px] 2xl:text-[32px]">Marchella</h2>
+    <h2 class="text-[20px] md:text-[24px] 2xl:text-[32px]"><%= kreator %></h2>
     <div class="flex items-center">
       <span><img src="assets/cards/eth.png" alt="" class="w-[16px]" /></span>
       <span
         class="text-[20px] 2xl:text-[24px] text-[#15BFFD] font-extrabold mr-[5px]"
-        >278.24
+        ><%= price %>
       </span>
       <span class="text-[20px] 2xl:text-[24px] text-[#15BFFD] font-extrabold"
         >ETH</span
       >
     </div>
   </div>
-  <% if (!true) { %>
+  <% if (up) { %>
   <div
     class="flex items-center justify-center border-[1px] border-solid border-[#196000] bg-[#10362B] w-[138px] px-[10px] py-[12px] rounded-[40px]"
   >
     <span class="mr-[5px]"
       ><img src="assets/cards/green.png" alt="" class="w-[23px]" />
     </span>
-    <h3 class="text-[20px] 2xl:text-[24px] ml-[5px] text-[#24FF00]">21.5%</h3>
+    <h3 class="text-[20px] 2xl:text-[24px] ml-[5px] text-[#24FF00]">
+      <%= volatility %>
+    </h3>
   </div>
   <% } else { %>
   <div
@@ -36,7 +34,9 @@
     <span class="mr-[5px]"
       ><img src="assets/cards/red.png" alt="" class="w-[23px]" />
     </span>
-    <h3 class="text-[20px] 2xl:text-[24px] ml-[5px] text-[#EB1414]">21.5%</h3>
+    <h3 class="text-[20px] 2xl:text-[24px] ml-[5px] text-[#EB1414]">
+      <%= volatility %>
+    </h3>
   </div>
   <% } %>
 </div>
