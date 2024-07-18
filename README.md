@@ -9,10 +9,9 @@ Compile frontend:
 `
 npm run dev
 `
-Jalankan server:
-`
-npm start
-`
+Buka website:
+2 Cara:
+`Gunakan extension live server` atau `Paste index.html path ke browser`
 ### Buka aplikasi di browser
 `
 Masuk ke localhost:300
