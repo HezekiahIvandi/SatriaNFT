@@ -66,3 +66,19 @@
 .jelajahi-extended {
   background-color: #4639fa;
 }
+
+.category-btn.active {
+  background-color: #4639fa;
+}
+
+.profile-btn.active {
+  border-bottom: 3px solid #194cff;
+}
+
+.profile-btn.active .num {
+  background-color: #5e5e5e;
+  color: white;
+}
+.profile-btn.active h3 {
+  color: white !important;
+}

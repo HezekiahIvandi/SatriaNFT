@@ -567,7 +567,7 @@ JelajahiNFTs.forEach((card) => {
   if (card.up) {
     jelajahiConn.innerHTML += `
         <div
-      class="card rounded-[18px] 2xl:rounded-[24px] w-[300px] 2xl:w-[400px] px-[1.5rem] py-[1.5rem] 2xl:py-[2rem] items-center"
+      class="card rounded-[18px] 2xl:rounded-[24px] min-w-[300px] 2xl:w-[100%] px-[1.5rem] py-[1.5rem] 2xl:py-[2rem] items-center"
     >
       <div class="img-container relative">
         <img src="${card.imageUrl}" alt="" />
@@ -627,7 +627,7 @@ JelajahiNFTs.forEach((card) => {
   } else {
     jelajahiConn.innerHTML += `
         <div
-      class="card rounded-[18px] 2xl:rounded-[24px] w-[300px] 2xl:w-[400px] px-[1.5rem] py-[1.5rem] 2xl:py-[2rem] items-center"
+      class="card card-size rounded-[18px] 2xl:rounded-[24px] min-w-[300px] 2xl:w-[100%] px-[1.5rem] py-[1.5rem] 2xl:py-[2rem] items-center"
     >
       <div class="img-container relative">
         <img src="${card.imageUrl}" alt="" />
@@ -758,10 +758,12 @@ kreatorInfo.forEach((info, index) => {
   if (info.up) {
     kreatorConn.innerHTML += `
         <div
-  class="w-[534px] px-[20px] py-[20px] rounded-[8px] flex justify-between border-[1px] border-solid border-[#1286B0] items-center"
+  class="w-[100%] min-w-[380px] px-[20px] py-[20px] rounded-[8px] flex justify-between border-[1px] border-solid border-[#1286B0] items-center"
 >
-  <h2 class="text-[20px] md:text-[24px] 2xl:text-[36px]">${index}</h2>
-  <img src="${info.imageUrl}" alt="" class="aspect-square w-[100px] mr-[10px]" />
+  <h2 class="text-[20px] md:text-[24px] 2xl:text-[36px]">${index + 1}</h2>
+  <img src="${
+    info.imageUrl
+  }" alt="" class="aspect-square  w-[70px] 2xl:w-[100px]  mr-[10px]" />
   <div class="flex flex-col items-center justify-center">
     <h2 class="text-[20px] md:text-[24px] 2xl:text-[32px]">${info.kreator}</h2>
     <div class="flex items-center">
@@ -777,7 +779,7 @@ kreatorInfo.forEach((info, index) => {
   </div>
  
   <div
-    class="flex items-center justify-center border-[1px] border-solid border-[#196000] bg-[#10362B] w-[138px] px-[10px] py-[12px] rounded-[40px]"
+    class="hidden md:flex items-center justify-center border-[1px] border-solid border-[#196000] bg-[#10362B] w-[100px] 2xl:w-[138px] px-[10px] py-[12px] rounded-[40px]"
   >
     <span class="mr-[5px]"
       ><img src="assets/cards/green.png" alt="" class="w-[23px]" />
@@ -794,10 +796,12 @@ kreatorInfo.forEach((info, index) => {
   } else {
     kreatorConn.innerHTML += `
          <div
-  class="w-[534px] px-[20px] py-[20px] rounded-[8px] flex justify-between border-[1px] border-solid border-[#1286B0] items-center"
+  class="w-[100%] min-w-[380px] px-[20px] py-[20px] rounded-[8px] flex justify-between border-[1px] border-solid border-[#1286B0] items-center"
 >
-  <h2 class="text-[20px] md:text-[24px] 2xl:text-[36px]">${index}</h2>
-  <img src="${info.imageUrl}" alt="" class="aspect-square w-[100px] mr-[10px]" />
+  <h2 class="text-[20px] md:text-[24px] 2xl:text-[36px]">${index + 1}</h2>
+  <img src="${
+    info.imageUrl
+  }" alt="" class="aspect-square w-[70px] 2xl:w-[100px]  mr-[10px]" />
   <div class="flex flex-col items-center justify-center">
     <h2 class="text-[20px] md:text-[24px] 2xl:text-[32px]">${info.kreator}</h2>
     <div class="flex items-center">
@@ -813,7 +817,7 @@ kreatorInfo.forEach((info, index) => {
   </div>
 
   <div
-    class="flex items-center justify-center border-[1px] border-solid border-[#94356A] bg-[#350E3B] w-[138px] px-[10px] py-[12px] rounded-[40px]"
+    class="hidden md:flex  items-center justify-center border-[1px] border-solid border-[#94356A] bg-[#350E3B] w-[100px] 2xl:w-[138px] px-[10px] py-[12px] rounded-[40px]"
   >
     <span class="mr-[5px]"
       ><img src="assets/cards/red.png" alt="" class="w-[23px]" />
