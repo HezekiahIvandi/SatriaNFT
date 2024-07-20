@@ -169,25 +169,28 @@
         <div class=""></div>
       </div>
       
-      <div class="w-full flex justify-between px-[40px] md:px-[80px] lg:px-[120px] pt-[150px]">
+      <div class="w-full flex flex-col gap-[30px] md:flex-row justify-between px-[40px] md:px-[80px] lg:px-[120px] pt-[150px]">
         <h3 class="text-[24px] md:text-[36px] lg:text-[40px] 2xl:text-[48px]">
         ImperialNFT
       </h3>
-      <div>
+      <div class="flex">
         
         <button
-        class="items-center font-semibold rounded-[8px] w-[140px] md:w-[165px] 2xl:w-[239px] 2xl:h-[70px] px-[4px] md:px-[10px] py-[10px] md:py-[20px] 2xl:py-[12px] bg-[#4639FA] hover:bg-[#2046cc] ease-in-out duration-75"
+        class="flex justify-center gap-[10px] items-center font-semibold rounded-[8px] w-[160px] md:w-[165px] 2xl:w-[239px] 2xl:h-[70px] px-[15px] md:px-[10px] py-[10px] md:py-[20px] 2xl:py-[12px] bg-[#4639FA] hover:bg-[#2046cc] ease-in-out duration-75"
       >
         <img src="assets/profile/copy.png" alt="" class="w-[24px]">0xc0E3...B79C
       </button>
  
   
+      <div class="relative">  
         <button
-          class=" items-center 2xl:animate-pulse rounded-[8px] font-semibold 2xl:h-[70px] ml-[1rem] px-[30px] py-[10px] md:py-[20px] 2xl:py-[18px] bg-[#313860] hover:bg-[#4a5281] ease-in-out duration-75"
+          id="heart-btn"
+          class="neon-btn7 flex justify-center gap-[10px] items-center 2xl:animate-pulse rounded-[8px] font-semibold 2xl:h-[70px] ml-[1rem] px-[30px] py-[10px] md:py-[20px] 2xl:py-[18px] bg-[#313860] hover:bg-[#4a5281] ease-in-out duration-75"
         >
-        <img src="assets/profile/heart.png" alt="" class="w-[24px]">
-        Sukai Kreator  Ini
+          <img src="assets/profile/heart.png" alt="" class="w-[24px]">
+          Sukai Kreator  Ini
         </button>
+      </div>
 
 
 
@@ -256,10 +259,10 @@
       <div class="flex justify-center items-center">
         <button class="w-[28%] profile-btn active flex justify-center">
           <div
-            class="flex items-center gap-[30px] pb-[10px] px-[30px] justify-center"
+            class="flex items-center gap-[15px] 2xl:gap-[30px] pb-[10px] px-[30px] justify-center"
           >
             <h3
-              class="text-[20px] md:text-[24px] lg:text-[32px] 2xl:text-[36px] text-[#929191]"
+              class="text-[16px] md:text-[20px] lg:text-[28px] 2xl:text-[36px] text-[#929191]"
             >
               Buatan Kreator
             </h3>
@@ -273,10 +276,10 @@
 
         <button class="w-[28%] profile-btn flex justify-center">
           <div
-            class="flex items-center gap-[30px] pb-[10px] px-[30px] justify-center"
+            class="flex items-center gap-[15px] 2xl:gap-[30px] pb-[10px] px-[30px] justify-center"
           >
             <h3
-              class="text-[20px] md:text-[24px] lg:text-[32px] 2xl:text-[36px] text-[#929191]"
+              class="text-[16px] md:text-[20px] lg:text-[28px] 2xl:text-[36px] text-[#929191]"
             >
               Dimiliki
             </h3>
@@ -290,10 +293,10 @@
 
         <button class="w-[28%] profile-btn flex justify-center">
           <div
-            class="flex items-center gap-[30px] pb-[10px] px-[30px] justify-center"
+            class="flex items-center gap-[15px] 2xl:gap-[30px] pb-[10px] px-[30px] justify-center"
           >
             <h3
-              class="text-[20px] md:text-[24px] lg:text-[32px] 2xl:text-[36px] text-[#929191]"
+              class="text-[16px] md:text-[20px] lg:text-[28px] 2xl:text-[36px] text-[#929191]"
             >
               NFTs Terlaris
             </h3>
@@ -306,10 +309,18 @@
         </button>
       </div>
     </div>
+
     <!-- footer -->
     <div
       class="px-[40px] md:px-[80px] lg:px-[120px] bg-[#000000] py-[40px] flex flex-col justify-center items-center"
     >
+    <div class="mt-[30px] mb-[60px] flex overflow-hidden w-full">
+         <div
+        id="profile-nft-container"
+        class="flex flex-nowrap overflow-auto md:overflow-hidden md:grid md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-[25px] ">
+      </div>
+    </div>
+   
       <div class="w-[75%] flex flex-col justify-center pb-[100px]">
         <h2
           class="text-[24px] md:text-[30px] lg:text-[40px] 2xl:text-[48px] text-center"
@@ -450,4 +461,5 @@
   </body>
   <script src="js/navbar.js" defer></script>
   <script src="js/home.js" defer></script>
+  <script src="js/nftProfile.js" defer></script>
 </html>

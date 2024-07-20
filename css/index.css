@@ -326,6 +326,29 @@ li:hover {
     background-size: 100% 100%;
     background-repeat: no-repeat;
   }
+  .neon-btn7::before {
+    content: "";
+    position: absolute;
+    background-image: url("../assets/btn-border-up.png");
+    left: 4%;
+    top: -14%;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+  .neon-btn7::after {
+    content: "";
+    position: absolute;
+    background-image: url("../assets/btn-border-down.png");
+    bottom: -10%;
+    right: -3%;
+    height: 100%;
+    width: 100%;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
 }
 /* gradient texts */
 .gradient-text {
