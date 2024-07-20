@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Top Kreator</title>
+    <title>Pasar NFT</title>
 
     <link rel="stylesheet" href="css/extra.css" />
     <link rel="stylesheet" href="css/index.css" />
@@ -161,11 +161,11 @@
       </div>
     </div>
 
-    <!-- top kreator -->
+    <!-- pasar -->
     <div
-      class="flex flex-col justify-center items-center px-[40px] md:px-[80px] lg:px-[120px] mt-[120px]"
+      class="flex flex-col justify-center items-center px-[40px] md:px-[80px] lg:px-[120px] mt-[120px] w-full"
     >
-      <div class="flex flex-col items-center justify-center">
+      <div class="flex flex-col items-center justify-center w-full">
         <img
           src="assets/kreator/line-blue.png"
           alt=""
@@ -174,20 +174,112 @@
         <h3
           class="text-[#15BFFD] text-[20px] md:text-[24px] lg:text-[32px] 2xl:text-[36px] font-light"
         >
-          Top Kreator
+          Pasar NFTs
         </h3>
         <h2
           class="text-[24px] md:text-[32px] lg:text-[40px] 2xl:text-[48px] font-medium"
         >
-          Kreator SatriaNFT Teratas 🔥
+          Selamat Datang di SatriaNFT
         </h2>
+        <div
+          class="w-full mt-[30px] flex flex-col gap-[30px] justify-center md:flex-row md:justify-between"
+        >
+          <div class="ddown-container relative">
+            <button
+              class="flex items-center gap-[30px] px-[25px] py-[15px] rounded-[8px] border-[#15BFFD] border-solid border-[1px] text-[20px] md:text-[24px] lg:text-[28px] 2xl:text-[32px]"
+            >
+              Koleksi
+              <img src="assets/Pasar/down-arrow.png" alt="" class="w-[32px]" />
+            </button>
+            <div class="ddown-menu bg-transparent hidden">
+              <p value="Koleksi">Koleksi</p>
+              <p value="Ilustrasi">Ilustrasi</p>
+              <p value="Lukisan">Lukisan</p>
+              <p value="Olahraga">Olahraga</p>
+              <p value="Animasi">Animasi</p>
+              <p value="Video">Video</p>
+              <p value="Kreator">Kreator</p>
+            </div>
+          </div>
+          <div class="relative w-[50%]">
+            <input
+              placeholder="Cari Item, Koleksi, Kreator..."
+              class="w-full bg-transparent flex items-center gap-[30px] px-[75px] py-[15px] rounded-[8px] border-[#15BFFD] border-solid border-[1px] text-[20px] md:text-[24px] lg:text-[28px] 2xl:text-[32px]"
+            />
+
+            <img
+              src="assets/Pasar/search.png"
+              alt=""
+              class="w-[32px] absolute m left-[1.3rem] top-0 bottom-0 my-auto"
+            />
+          </div>
+
+          <div class="flex gap-[30px]">
+            <button
+              class="flex items-center px-[15px] py-[10px] 2xl:py-[15px] rounded-[8px] border-[#15BFFD] border-solid border-[1px] hover:bg-[#15BFFD]"
+            >
+              <img
+                src="assets/Pasar/sort-up.png"
+                alt=""
+                class="w-[32px] lg:w-[42px] 2xl:w-[50px]"
+              />
+            </button>
+            <button
+              class="flex items-center px-[15px] py-[10px] 2xl:py-[15px] rounded-[8px] border-[#15BFFD] border-solid border-[1px] hover:bg-[#15BFFD]"
+            >
+              <img
+                src="assets/Pasar/sort-down.png"
+                alt=""
+                class="w-[32px] lg:w-[42px] 2xl:w-[50px]"
+              />
+            </button>
+          </div>
+        </div>
       </div>
 
       <div
-        id="top-kreator-page-con"
-        class="flex flex-col gap-[30px] w-full mt-[60px]"
-      ></div>
+        class="flex flex-col gap-[30px] md:flex-row justify-between mt-[60px]"
+      >
+        <div
+          class="w-[55%] font-bold text-[32px] md:text-[42px] lg:text-[52px] 2xl:text-[64px leading-tight"
+        >
+          Daftarkan diri Anda dan <br />
+          mulai jualan NFT hari ini!
+        </div>
+        <div class="w-[40%]">
+          <div>
+            <p class="text-[16px] 2xl:text-[20px] text-[#ADB9C7]">
+              Mulailah petualangan baru Anda dalam dunia digital dengan menjual
+              NFT. Bergabunglah dengan SatriaNFT yang terus berkembang dan
+              nikmati berbagai fitur yang dirancang khusus untuk membantu Anda
+              sukses di pasar NFT.
+            </p>
+          </div>
+          <div>
+            <a href="" class="underline mt-[10px] flex gap-[10px]">
+              Mulai Jualan
+              <img src="assets/Pasar/send.png" alt="" class="h-[24px]" />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div
+          id="pasar-jual-container"
+          class="flex flex-nowrap overflow-auto md:overflow-hidden md:grid md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-[25px]"
+        ></div>
+        <div class="flex justify-center items-center mt-[40px]">
+          <button
+            id="extra-pasar-nft-btn"
+            class="border-[1px] px-[24px] py-[16px] border-solid border-[#4639FA] rounded-[8px] text-[16px] 2xl:text-[24px] text-center hover:bg-[#4639FA] duration-75 ease-in-out"
+          >
+            Muat Lebih Banyak
+          </button>
+        </div>
+      </div>
     </div>
+
     <!-- footer -->
     <div
       class="px-[40px] md:px-[80px] lg:px-[120px] bg-[#0C1033] py-[40px] flex flex-col justify-center items-center"
@@ -331,6 +423,5 @@
     </div>
   </body>
 
-  <script src="js/loadTopKreator.js"></script>
   <script src="js/navbar.js" defer></script>
 </html>

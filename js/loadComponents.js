@@ -764,8 +764,12 @@ kreatorInfo.forEach((info, index) => {
   <img src="${
     info.imageUrl
   }" alt="" class="aspect-square  w-[70px] 2xl:w-[100px]  mr-[10px]" />
+
+  <div class="flex justify-between w-[70%] 2xl:w-[60%] max-w-[500px]">
   <div class="flex flex-col items-center justify-center">
-    <h2 class="text-[20px] md:text-[24px] 2xl:text-[32px]">${info.kreator}</h2>
+    <h2 class="text-[20px] md:text-[24px] 2xl:text-[32px]">
+      ${info.kreator}
+    </h2>
     <div class="flex items-center">
       <span><img src="assets/cards/eth.png" alt="" class="w-[16px]" /></span>
       <span
@@ -777,9 +781,9 @@ kreatorInfo.forEach((info, index) => {
       >
     </div>
   </div>
- 
+
   <div
-    class="hidden md:flex items-center justify-center border-[1px] border-solid border-[#196000] bg-[#10362B] w-[100px] 2xl:w-[138px] px-[10px] py-[12px] rounded-[40px]"
+    class="flex items-center justify-center border-[1px] border-solid border-[#196000] bg-[#10362B] w-[100px] 2xl:w-[138px] px-[10px] py-[12px] rounded-[40px]"
   >
     <span class="mr-[5px]"
       ><img src="assets/cards/green.png" alt="" class="w-[23px]" />
@@ -788,6 +792,8 @@ kreatorInfo.forEach((info, index) => {
       ${info.volatility}
     </h3>
   </div>
+</div>
+
   
 </div>
 
@@ -802,6 +808,8 @@ kreatorInfo.forEach((info, index) => {
   <img src="${
     info.imageUrl
   }" alt="" class="aspect-square w-[70px] 2xl:w-[100px]  mr-[10px]" />
+
+  <div class="flex justify-between w-[70%] 2xl:w-[60%] max-w-[500px]">
   <div class="flex flex-col items-center justify-center">
     <h2 class="text-[20px] md:text-[24px] 2xl:text-[32px]">${info.kreator}</h2>
     <div class="flex items-center">
@@ -817,7 +825,7 @@ kreatorInfo.forEach((info, index) => {
   </div>
 
   <div
-    class="hidden md:flex  items-center justify-center border-[1px] border-solid border-[#94356A] bg-[#350E3B] w-[100px] 2xl:w-[138px] px-[10px] py-[12px] rounded-[40px]"
+    class="flex items-center justify-center border-[1px] border-solid border-[#94356A] bg-[#350E3B] w-[100px] 2xl:w-[138px] px-[10px] py-[12px] rounded-[40px]"
   >
     <span class="mr-[5px]"
       ><img src="assets/cards/red.png" alt="" class="w-[23px]" />
@@ -826,6 +834,7 @@ kreatorInfo.forEach((info, index) => {
       ${info.volatility}
     </h3>
   </div>
+</div>
 
 </div>
 
