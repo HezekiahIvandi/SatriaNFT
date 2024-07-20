@@ -82,3 +82,24 @@
 .profile-btn.active h3 {
   color: white !important;
 }
+
+.wallet-connected {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+@media (min-width: 768px) {
+  .wallet-connected {
+    font-size: 12px;
+  }
+}
+@media (min-width: 1024px) {
+  .wallet-connected {
+    font-size: 16px;
+  }
+}
+@media (min-width: 1536px) {
+  .wallet-connected {
+    font-size: 20px;
+  }
+}

@@ -1,3 +1,17 @@
+const queryString = window.location.search;
+if (queryString == "?nav2") {
+  //logged in
+  const navBtn = document.getElementById("nav-btn");
+  navBtn.innerHTML = `
+         <button
+          id="hubungkan-wallet"
+          class="neon-btn hidden text-[16px] font-semibold text-[#879cb5] hover:text-[white] py-[10px] px-[30px] lg:inline 2xl:w-[270px] 2xl:text-[20px] 2xl:py-[15px]"
+        >
+          Hubungkan Wallet
+        </button>
+  `;
+}
+
 const menuOpen = document.querySelector("#mobile-menu-open");
 const menuClose = document.querySelector("#mobile-menu-close");
 const navMenu = document.querySelector("#side-bar");
@@ -125,6 +139,19 @@ const DOMdetailAkun = () => {
         Lepas
       </button>
     </div>
+  `;
+  connected();
+};
+
+const connected = () => {
+  const navBtn = document.getElementById("nav-btn");
+  navBtn.innerHTML = `
+         <button
+          id="hubungkan-wallet"
+          class="wallet-connected"
+        >
+          <h3>Selamat Datang Hezekiah! 👋<h3/>
+        </button>
   `;
 };
 

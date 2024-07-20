@@ -14,11 +14,12 @@
       id="navbar"
       class="sticky w-[100%] z-[99] top-0 px-[40px] md:px-[80px] lg:px-[120px] py-[30px] flex justify-between items-center border-b-[#879CB5] border-b-[1px] bg-[#0c1033]"
     >
-      <img
-        src="assets/Logo.png"
-        alt=""
-        class="w-[120px] md:w-[140px] lg:w-[160px] 2xl:w-[200px]"
-      />
+      <a href="index.html">
+        <img
+          src="assets/Logo.png"
+          alt=""
+          class="w-[120px] md:w-[140px] lg:w-[160px] 2xl:w-[200px]"
+      /></a>
 
       <ul
         class="hidden justify-between w-[50%] max-w-[630px] static bg-transparent p-0 text-[16px] text-[#879cb5] lg:flex 2xl:text-[20px]"
@@ -30,12 +31,16 @@
         <li><a href="/about">Top Kreator</a></li>
       </ul>
 
-      <button
-        id="hubungkan-wallet"
-        class="neon-btn hidden text-[16px] font-semibold text-[#879cb5] hover:text-[white] py-[10px] px-[30px] lg:inline 2xl:w-[270px] 2xl:text-[20px] 2xl:py-[15px]"
-      >
-        Hubungkan Wallet
-      </button>
+      <div id="nav-btn">
+        <a href="login.html?nav2">
+          <button
+            id="hubungkan-wallet"
+            class="neon-btn hidden text-[16px] font-semibold text-[#879cb5] hover:text-[white] py-[10px] px-[30px] lg:inline 2xl:w-[270px] 2xl:text-[20px] 2xl:py-[15px]"
+          >
+            Buat Akun SatriaNFT
+          </button>
+        </a>
+      </div>
 
       <!-- mobile navigation elements -->
       <div class="lg:hidden">
@@ -209,7 +214,7 @@
         <div
           class="flex text-[12px] md:text-[16px] 2xl:text-[20px] mt-[40px] justify-center py-[15px]"
         >
-          <a href="/home.html">
+          <a href="/index.html?nav2">
             <button
               class="items-center font-semibold rounded-[8px] w-[140px] md:w-[165px] 2xl:w-[239px] 2xl:h-[70px] px-[4px] md:px-[10px] py-[10px] md:py-[20px] 2xl:py-[12px] bg-[#4639FA] hover:bg-[#2046cc] ease-in-out duration-75"
             >
@@ -217,7 +222,7 @@
             </button>
           </a>
           <div class="relative">
-            <a href="signup.html">
+            <a href="signup.html?nav2">
               <button
                 class="neon-btn6 items-center 2xl:animate-pulse rounded-[8px] font-semibold 2xl:h-[70px] ml-[1rem] px-[30px] py-[10px] md:py-[20px] 2xl:py-[18px] bg-[#313860] hover:bg-[#4a5281] ease-in-out duration-75"
               >
