@@ -162,7 +162,7 @@
     </div>
 
     <!-- pasar -->
-    <div
+    <di
       class="flex flex-col justify-center items-center px-[40px] md:px-[80px] lg:px-[120px] mt-[120px] w-full"
     >
       <div class="flex flex-col items-center justify-center w-full">
@@ -182,23 +182,42 @@
           Selamat Datang di SatriaNFT
         </h2>
         <div
-          class="w-full mt-[30px] flex flex-col gap-[30px] justify-center md:flex-row md:justify-between"
+          class="w-full mt-[90px] mb-[60px] flex flex-col gap-[30px] justify-center md:flex-row md:justify-between"
         >
           <div class="ddown-container relative">
             <button
+              id="ddown-button"
               class="flex items-center gap-[30px] px-[25px] py-[15px] rounded-[8px] border-[#15BFFD] border-solid border-[1px] text-[20px] md:text-[24px] lg:text-[28px] 2xl:text-[32px]"
             >
-              Koleksi
+              <p>Koleksi</p>
               <img src="assets/Pasar/down-arrow.png" alt="" class="w-[32px]" />
             </button>
-            <div class="ddown-menu bg-transparent hidden">
-              <p value="Koleksi">Koleksi</p>
-              <p value="Ilustrasi">Ilustrasi</p>
-              <p value="Lukisan">Lukisan</p>
-              <p value="Olahraga">Olahraga</p>
-              <p value="Animasi">Animasi</p>
-              <p value="Video">Video</p>
-              <p value="Kreator">Kreator</p>
+            <div
+              id="ddown-menu"
+              class="bg-transparent absolute z-[102] text-[20px] md:text-[24px] lg:text-[28px] 2xl:text-[32px] rounded-[8px] border-[#15BFFD] border-solid border-[1px] backdrop-blur-lg hidden"
+            >
+              <button
+                value="Koleksi"
+                class="ddown-items hover:bg-[#15BFFD] active"
+              >Koleksi</button>
+              <button value="Ilustrasi" class="ddown-items hover:bg-[#15BFFD]">
+                Ilustrasi
+              </button>
+              <button value="Lukisan" class="ddown-items hover:bg-[#15BFFD]">
+                Lukisan
+              </button>
+              <button value="Olahraga" class="ddown-items hover:bg-[#15BFFD]">
+                Olahraga
+              </button>
+              <button value="Animasi" class="ddown-items hover:bg-[#15BFFD]">
+                Animasi
+              </button>
+              <button value="Video" class="ddown-items hover:bg-[#15BFFD]">
+                Video
+              </button>
+              <button value="Kreator" class="ddown-items hover:bg-[#15BFFD]">
+                Kreator
+              </button>
             </div>
           </div>
           <div class="relative w-[50%]">
@@ -238,15 +257,15 @@
       </div>
 
       <div
-        class="flex flex-col gap-[30px] md:flex-row justify-between mt-[60px]"
+        class="w-full flex flex-col gap-[30px] justify-center md:flex-row md:justify-between mt-[0px] lg:mt-[60px]"
       >
         <div
-          class="w-[55%] font-bold text-[32px] md:text-[42px] lg:text-[52px] 2xl:text-[64px leading-tight"
+          class="text-center md:text-left w-full md:w-[55%] font-bold text-[32px] md:text-[42px] lg:text-[52px] 2xl:text-[64px leading-tight"
         >
           Daftarkan diri Anda dan <br />
           mulai jualan NFT hari ini!
         </div>
-        <div class="w-[40%]">
+        <div class="text-center md:text-left w-full md:w-[40%]">
           <div>
             <p class="text-[16px] 2xl:text-[20px] text-[#ADB9C7]">
               Mulailah petualangan baru Anda dalam dunia digital dengan menjual
@@ -264,11 +283,21 @@
         </div>
       </div>
 
-      <div>
+      
         <div
-          id="pasar-jual-container"
-          class="flex flex-nowrap overflow-auto md:overflow-hidden md:grid md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-[25px]"
-        ></div>
+          class="flex overflow-hidden w-full"
+        >
+          <div
+            id="pasar-jual-container"
+            class="flex flex-nowrap overflow-auto md:overflow-hidden md:grid md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-[25px] mt-[120px]"
+          >
+            <!-- test -->
+     
+
+            <!-- test -->
+          </div>
+        </div>
+        
         <div class="flex justify-center items-center mt-[40px]">
           <button
             id="extra-pasar-nft-btn"
@@ -277,7 +306,9 @@
             Muat Lebih Banyak
           </button>
         </div>
-      </div>
+      
+
+
     </div>
 
     <!-- footer -->
@@ -424,4 +455,5 @@
   </body>
 
   <script src="js/navbar.js" defer></script>
+  <script src="js/pasar.js" defer></script>
 </html>

@@ -1,0 +1,32 @@
+<div
+  class="kreator-card bg-[#2B2B3E] rounded-[18px] 2xl:rounded-[24px] max-w-[420px] min-w-[300px] 2xl:w-[100%] px-[1rem] py-[1rem] items-center"
+>
+  <div class="relative img-con">
+    <img class="pasar-card-img" src="${card.bgUrl}" alt="" />
+
+    <a href="${card.profileUrl}">
+      <button
+        class="kreator-card-btn opacity-0 w-[200px] 2xl:w-[270px] px-[20px] 2x:px-[30px] py-[15px] text-[14px] 2xl-[text-20px] bg-[#4639FA] rounded-[8px] absolute bottom-1/2 left-1/2 transform -translate-x-1/2"
+      >
+        Kunjungi Profile
+      </button>
+    </a>
+
+    <div class="absolute mx-auto left-0 right-0 w-fit bottom-[-54px]">
+      <img src="${card.pfpUrl}" alt="" class="rounded-full w-[108px]" />
+    </div>
+  </div>
+
+  <div
+    class="mt-[60px] flex flex-col justify-center items-center w-full mb-[20px]"
+  >
+    <h3 class="text-[20px] 2xl:text-[24px] font-semibold mt-[20px]">
+      ${card.name}
+    </h3>
+    <div class="flex items-center w-full justify-center gap-[4px]">
+      <span><img src="assets/cards/eth.png" alt="" class="w-[20px]" /></span>
+      <span class="text-[20px] text-[#15BFFD] font-bold">${card.balance}</span>
+      <span class="text-[20px] text-[#15BFFD] font-bold">ETH</span>
+    </div>
+  </div>
+</div>

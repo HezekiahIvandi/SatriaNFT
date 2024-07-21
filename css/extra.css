@@ -63,6 +63,18 @@
   transition: 0.5s ease-in-out;
 }
 
+.kreator-card:hover .img-con .pasar-card-img {
+  filter: blur(10px);
+  pointer-events: none;
+  user-select: none;
+  transition: 0.5s ease-in-out;
+}
+
+.kreator-card:hover .kreator-card-btn {
+  opacity: 1;
+  transition: 0.5s ease-in-;
+}
+
 .jelajahi-extended {
   background-color: #4639fa;
 }
@@ -104,9 +116,16 @@
   }
 }
 
-.ddown-menu {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.ddown-items {
+  padding: 15px 23px;
+  width: 100%;
+  text-align: left;
+}
+
+.ddown-items.active {
+  background-color: #15bffd;
+}
+
+#extra-pasar-nft-btn.extended {
+  background-color: #4639fa;
 }
