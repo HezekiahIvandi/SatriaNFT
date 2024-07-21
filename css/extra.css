@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth;
+}
 #down-btn {
   width: 26px;
 }
@@ -128,4 +131,11 @@
 
 #extra-pasar-nft-btn.extended {
   background-color: #4639fa;
+}
+
+.jual-btn.active h3 {
+  color: white;
+}
+.jual-btn.active {
+  border-bottom: 3px solid #194cff;
 }

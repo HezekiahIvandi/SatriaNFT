@@ -10,7 +10,12 @@ cateBtns.forEach((btn) => {
     btn.classList.toggle("active");
     extraBtn.classList.remove("jelajahi-extended");
     categoryGlobalVar = btnText;
-    loadNft(btnText);
+    console.log(btnText);
+    if (btnText == "Kreator") {
+      loadKreatorCards(category["Kreator"]);
+    } else {
+      loadNft(btnText);
+    }
   });
 });
 
@@ -417,6 +422,64 @@ category = {
       up: true,
     },
   ],
+  Kreator: [
+    {
+      bgUrl: "/assets/NFTs/kreator/bg/1.png",
+      profileUrl: "profile.html?nav2/1",
+      pfpUrl: "assets/NFTs/kreator/pfp/1.png",
+      name: "CryptoPunks",
+      balance: "100.7K",
+    },
+    {
+      bgUrl: "/assets/NFTs/kreator/bg/2.png",
+      profileUrl: "profile.html?nav2/2",
+      pfpUrl: "assets/NFTs/kreator/pfp/2.png",
+      name: "CryptoPunks",
+      balance: "100.7K",
+    },
+    {
+      bgUrl: "/assets/NFTs/kreator/bg/3.png",
+      profileUrl: "profile.html?nav2/3",
+      pfpUrl: "assets/NFTs/kreator/pfp/3.png",
+      name: "CryptoPunks",
+      balance: "100.7K",
+    },
+    {
+      bgUrl: "/assets/NFTs/kreator/bg/4.png",
+      profileUrl: "profile.html?nav2/4",
+      pfpUrl: "assets/NFTs/kreator/pfp/4.png",
+      name: "CryptoPunks",
+      balance: "100.7K",
+    },
+    {
+      bgUrl: "/assets/NFTs/kreator/bg/5.png",
+      profileUrl: "profile.html?nav2/5",
+      pfpUrl: "assets/NFTs/kreator/pfp/5.png",
+      name: "CryptoPunks",
+      balance: "100.7K",
+    },
+    {
+      bgUrl: "/assets/NFTs/kreator/bg/6.png",
+      profileUrl: "profile.html?nav2/6",
+      pfpUrl: "assets/NFTs/kreator/pfp/6.png",
+      name: "CryptoPunks",
+      balance: "100.7K",
+    },
+    {
+      bgUrl: "/assets/NFTs/kreator/bg/7.png",
+      profileUrl: "profile.html?nav2/7",
+      pfpUrl: "assets/NFTs/kreator/pfp/7.png",
+      name: "CryptoPunks",
+      balance: "100.7K",
+    },
+    {
+      bgUrl: "/assets/NFTs/kreator/bg/8.png",
+      profileUrl: "profile.html?nav2/8",
+      pfpUrl: "assets/NFTs/kreator/pfp/8.png",
+      name: "CryptoPunks",
+      balance: "100.7K",
+    },
+  ],
 };
 categoryExtra = {
   Koleksi: [
@@ -623,6 +686,36 @@ categoryExtra = {
       up: true,
     },
   ],
+  Kreator: [
+    {
+      bgUrl: "/assets/NFTs/kreator/bg/9.png",
+      profileUrl: "profile.html?nav2/9",
+      pfpUrl: "assets/NFTs/kreator/pfp/9.png",
+      name: "CryptoPunks",
+      balance: "100.7K",
+    },
+    {
+      bgUrl: "/assets/NFTs/kreator/bg/10.png",
+      profileUrl: "profile.html?nav2/10",
+      pfpUrl: "assets/NFTs/kreator/pfp/10.png",
+      name: "CryptoPunks",
+      balance: "100.7K",
+    },
+    {
+      bgUrl: "/assets/NFTs/kreator/bg/11.png",
+      profileUrl: "profile.html?nav2/11",
+      pfpUrl: "assets/NFTs/kreator/pfp/11.png",
+      name: "CryptoPunks",
+      balance: "100.7K",
+    },
+    {
+      bgUrl: "/assets/NFTs/kreator/bg/12.png",
+      profileUrl: "profile.html?nav2/12",
+      pfpUrl: "assets/NFTs/kreator/pfp/12.png",
+      name: "CryptoPunks",
+      balance: "100.7K",
+    },
+  ],
 };
 const loadNftHtml = (Infos) => {
   const JConn = document.getElementById("jelajahi-container");
@@ -765,7 +858,11 @@ extraBtn.addEventListener("click", () => {
     Resetjelajahi = document.getElementById("jelajahi-container").innerHTML;
     extraBtn.classList.toggle("jelajahi-extended");
     if (categoryExtra[categoryGlobalVar] == null) return null;
-    loadExtra(categoryExtra[categoryGlobalVar]);
+    if (categoryGlobalVar == "Kreator") {
+      loadKreatorCardsExtra(categoryExtra[categoryGlobalVar]);
+    } else {
+      loadExtra(categoryExtra[categoryGlobalVar]);
+    }
   } else {
     jelajahiCon.innerHTML = Resetjelajahi;
     extraBtn.classList.toggle("jelajahi-extended");
@@ -894,5 +991,89 @@ const loadExtra = (Extra) => {
         
         `;
     }
+  });
+};
+
+const loadKreatorCards = (Infos) => {
+  const JConn = document.getElementById("jelajahi-container");
+  JConn.innerHTML = "";
+
+  Infos.forEach((card) => {
+    JConn.innerHTML += `
+    <div
+  class="kreator-card bg-[#2B2B3E] rounded-[18px] 2xl:rounded-[24px] max-w-[420px] min-w-[300px] 2xl:w-[100%] px-[1rem] py-[1rem] items-center"
+>
+  <div class="relative img-con">
+    <img class="pasar-card-img" src="${card.bgUrl}" alt="" />
+
+    <a href="${card.profileUrl}">
+      <button
+        class="kreator-card-btn opacity-0 w-[200px] 2xl:w-[270px] px-[20px] 2x:px-[30px] py-[15px] text-[14px] 2xl-[text-20px] bg-[#4639FA] rounded-[8px] absolute bottom-1/2 left-1/2 transform -translate-x-1/2"
+      >
+        Kunjungi Profile
+      </button>
+    </a>
+
+    <div class="absolute mx-auto left-0 right-0 w-fit bottom-[-54px]">
+      <img src="${card.pfpUrl}" alt="" class="rounded-full w-[108px]" />
+    </div>
+  </div>
+
+  <div
+    class="mt-[60px] flex flex-col justify-center items-center w-full mb-[20px]"
+  >
+    <h3 class="text-[20px] 2xl:text-[24px] font-semibold mt-[20px]">
+      ${card.name}
+    </h3>
+    <div class="flex items-center w-full justify-center gap-[4px]">
+      <span><img src="assets/cards/eth.png" alt="" class="w-[20px]" /></span>
+      <span class="text-[20px] text-[#15BFFD] font-bold">${card.balance}</span>
+      <span class="text-[20px] text-[#15BFFD] font-bold">ETH</span>
+    </div>
+  </div>
+</div>
+
+    `;
+  });
+};
+const loadKreatorCardsExtra = (Infos) => {
+  const JConn = document.getElementById("jelajahi-container");
+
+  Infos.forEach((card) => {
+    JConn.innerHTML += `
+    <div
+  class="kreator-card bg-[#2B2B3E] rounded-[18px] 2xl:rounded-[24px] max-w-[420px] min-w-[300px] 2xl:w-[100%] px-[1rem] py-[1rem] items-center"
+>
+  <div class="relative img-con">
+    <img class="pasar-card-img" src="${card.bgUrl}" alt="" />
+
+    <a href="${card.profileUrl}">
+      <button
+        class="kreator-card-btn opacity-0 w-[200px] 2xl:w-[270px] px-[20px] 2x:px-[30px] py-[15px] text-[14px] 2xl-[text-20px] bg-[#4639FA] rounded-[8px] absolute bottom-1/2 left-1/2 transform -translate-x-1/2"
+      >
+        Kunjungi Profile
+      </button>
+    </a>
+
+    <div class="absolute mx-auto left-0 right-0 w-fit bottom-[-54px]">
+      <img src="${card.pfpUrl}" alt="" class="rounded-full w-[108px]" />
+    </div>
+  </div>
+
+  <div
+    class="mt-[60px] flex flex-col justify-center items-center w-full mb-[20px]"
+  >
+    <h3 class="text-[20px] 2xl:text-[24px] font-semibold mt-[20px]">
+      ${card.name}
+    </h3>
+    <div class="flex items-center w-full justify-center gap-[4px]">
+      <span><img src="assets/cards/eth.png" alt="" class="w-[20px]" /></span>
+      <span class="text-[20px] text-[#15BFFD] font-bold">${card.balance}</span>
+      <span class="text-[20px] text-[#15BFFD] font-bold">ETH</span>
+    </div>
+  </div>
+</div>
+
+    `;
   });
 };

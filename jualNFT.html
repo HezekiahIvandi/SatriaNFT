@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jual NFT</title>
+    <link rel="stylesheet" href="css/extra.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/output.css" />
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav
+      id="navbar"
+      class="sticky w-[100%] z-[99] top-0 px-[40px] md:px-[80px] lg:px-[120px] py-[30px] flex justify-between items-center border-b-[#879CB5] border-b-[1px] bg-[#0c1033]"
+    >
+      <a href="index.html">
+        <img
+          src="assets/Logo.png"
+          alt=""
+          class="w-[120px] md:w-[140px] lg:w-[160px] 2xl:w-[200px]"
+      /></a>
+
+      <ul
+        class="hidden justify-between w-[50%] max-w-[630px] static bg-transparent p-0 text-[16px] text-[#879cb5] lg:flex 2xl:text-[20px]"
+      >
+        <li><a href="/">Jelajahi</a></li>
+        <li><a href="pasarNFT.html">Pasar NFTs</a></li>
+        <li><a href="#cara-kerja">Cara Kerja</a></li>
+        <li class="current-page"><a href="jualNFT.html">Jual NFTs</a></li>
+        <li><a href="topKreator.html">Top Kreator</a></li>
+      </ul>
+
+      <div id="nav-btn">
+        <a href="signup.html?nav2">
+          <button
+            id="hubungkan-wallet"
+            class="neon-btn hidden text-[16px] font-semibold text-[#879cb5] hover:text-[white] py-[10px] px-[30px] lg:inline 2xl:w-[270px] 2xl:text-[20px] 2xl:py-[15px]"
+          >
+            Buat Akun SatriaNFT
+          </button>
+        </a>
+      </div>
+
+      <!-- mobile navigation elements -->
+      <div class="lg:hidden">
+        <button
+          id="mobile-menu-open"
+          class="absolute top-[30px] right-[40px] aspect-square w-[2rem] z-[90]"
+        >
+          <span class="sr-only">open menu</span>
+          <img src="assets/burger-menu.png" alt="" class="w-[1.3rem]" />
+        </button>
+        <ul
+          id="side-bar"
+          class="hide fixed top-0 bottom-0 right-0 left-[30%] z-[100] text-[25px] text-[grey]"
+        >
+          <li class="current-page"><a href="/">Jelajahi</a></li>
+          <li><a href="/pasarNFT.html">Pasar NFTs</a></li>
+          <li><a href="#cara-kerja">Cara Kerja</a></li>
+          <li><a href="jualNFT.html">Jual NFTs</a></li>
+          <li><a href="topKreator.html">Top Kreator</a></li>
+          <li>
+            <button
+              id="hubungkan-wallet-mobile"
+              class="font-semibold text-start text-[#879cb5] hover:text-[white]"
+            >
+              Hubungkan Wallet
+            </button>
+          </li>
+          <button
+            id="mobile-menu-close"
+            class="absolute top-[30px] right-[40px] aspect-square w-[2rem] z-[101]"
+          >
+            <span class="sr-only">close</span>
+            <img src="assets/close.png" alt="close-icon" class="w-[1.7rem]" />
+          </button>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- popups -->
+    <div
+      id="popup-1"
+      class="w-[350px] md:w-[450px] rounded-[15px] bg-[#121640] fixed top-[25%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-[100] py-[10px]"
+    >
+      <div
+        class="flex justify-between px-[20px] py-[10px] border-b-[solid] border-b-[grey] border-b-[1px]"
+      >
+        <h3 id="popup-title" class="text-[20px]">Hubungkan Wallet</h3>
+        <button id="wallet-close">
+          <img src="assets/popup-close.png" alt="" class="h-[30px]" />
+        </button>
+      </div>
+
+      <div id="popup-inner-container" class="px-[10px] md:px-[30px] py-[20px]">
+        <div class="flex justify-between mb-[25px]">
+          <h3 class="text-[16px]">Pilih Wallet</h3>
+          <button><img src="assets/up.png" alt="" class="w-[24px]" /></button>
+        </div>
+        <div
+          class="justify-center flex md:justify-between flex-wrap gap-[10px] md:gap-[20px]"
+        >
+          <button
+            class="wallet-buttons flex flex-col justify-center items-center gap-[10px]"
+          >
+            <img
+              src="assets/wallet/1.png"
+              alt=""
+              class="h-fit max-h-[60px] md:h-[36px] wallet-image"
+            />
+            <p class="text-[16px] text-center wallet-text">Metamask</p>
+          </button>
+          <button
+            class="wallet-buttons flex flex-col justify-center items-center gap-[10px]"
+          >
+            <img
+              src="assets/wallet/2.png"
+              alt=""
+              class="h-fit max-h-[60px] md:h-[36px] wallet-image"
+            />
+            <p class="text-[16px] text-center wallet-text">Exodus</p>
+          </button>
+          <button
+            class="wallet-buttons flex flex-col justify-center items-center gap-[10px]"
+          >
+            <img
+              src="assets/wallet/3.png"
+              alt=""
+              class="h-fit max-h-[60px] md:h-[36px] wallet-image"
+            />
+            <p class="text-[16px] text-center wallet-text">Coinbase</p>
+          </button>
+          <button
+            class="wallet-buttons flex flex-col justify-center items-center gap-[10px]"
+          >
+            <img
+              src="assets/wallet/4.png"
+              alt=""
+              class="h-fit max-h-[60px] md:h-[36px] wallet-image"
+            />
+            <p class="text-[16px] text-center wallet-text">Argent</p>
+          </button>
+          <button
+            class="wallet-buttons flex flex-col justify-center items-center gap-[10px]"
+          >
+            <img
+              src="assets/wallet/5.png"
+              alt=""
+              class="h-fit max-h-[60px] md:h-[36px] wallet-image"
+            />
+            <p class="text-[16px] text-center wallet-text">ImToken</p>
+          </button>
+        </div>
+        <div class="flex justify-between mt-[25px]">
+          <h3 class="text-[16px]">Pindai Barcode</h3>
+          <button>
+            <img src="assets/down.png" alt="" class="w-[24px]" />
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Jual NFT -->
+    <div class="">
+      <div>
+        <div class="relative image">
+          <img src="assets/JualNFT/bg.png" alt="" class="w-full" />
+          <div
+            class="flex flex-col gap-[20px] absolute px-[30px] py-[20px] lg:px-[40px] lg:py-[30px] 2xl:px-[60px] 2xl:py-[50px] right-[10%] bottom-[-80px] lg:bottom-[-100px] 2xl:bottom-[-180px] border-[3px] border-solid border-[#1335B2] rounded-[12px] bg-[#0C1033]"
+          >
+            <h3 class="text-[16px] lg:text-[20px] 2xl:text-[24px]">
+              Penawaran berakhir pada:
+            </h3>
+            <div class="flex gap-[10px] items-center">
+              <img src="assets/JualNFT/fire.png" alt="" class="w-[48px]" />
+              <h3
+                class="text-[24px] md:text-[28px] lg:text-[38px] 2xl:text-[48px]"
+              >
+                02 : 08 : 27 : 06
+              </h3>
+            </div>
+            <div class="flex justify-center">
+              <button
+                class="2xl:w-[270px] px-[20px] 2x:px-[30px] py-[15px] text-[14px] 2xl-[text-20px] bg-[#4639FA] rounded-[8px]"
+              >
+                Ajukan Penawaran
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="w-full flex flex-col gap-[5px] px-[40px] md:px-[80px] lg:px-[120px] pt-[150px]"
+      >
+        <h3 class="text-[24px] md:text-[36px] lg:text-[40px] 2xl:text-[48px]">
+          Selebrasi Nyepi
+        </h3>
+        <p class="text-[#616161] text-[16px] lg:text-[20px] 2xl:text-[24px]">
+          Diposting pada Juli 16, 2024
+        </p>
+      </div>
+
+      <div class="px-[40px] md:px-[80px] lg:px-[120px] pb-[150px]">
+        <div class="flex flex-col gap-[15px]">
+          <h3
+            class="text-[#879CB5] text-[20px] lg:text-[24px] 2xl:text-[32px] font-medium mt-[30px]"
+          >
+            Deskripsi
+          </h3>
+          <p class="text-[20px] lg:text-[24px] 2xl:text-[32px]">
+            NFT Selebrasi Nyepi adalah koleksi non-fungible token yang dirancang
+            untuk merayakan dan mengabadikan momen perayaan Nyepi, hari raya
+            umat Hindu di Bali. Nyepi adalah hari raya Tahun Baru Saka yang
+            dikenal sebagai "Hari Raya Sunyi" di mana seluruh aktivitas di Bali
+            berhenti total selama 24 jam. Selama Nyepi, masyarakat Hindu di Bali
+            melaksanakan empat pantangan utama: amati karya (tidak bekerja),
+            amati lelungan (tidak bepergian), amati geni (tidak menyalakan api
+            atau lampu), dan amati lelanguan (tidak bersenang-senang).
+          </p>
+        </div>
+        <div class="flex flex-col gap-[20px]">
+          <h3
+            class="text-[#879CB5] text-[20px] lg:text-[24px] 2xl:text-[32px] font-medium mt-[30px]"
+          >
+            Tag
+          </h3>
+          <div class="flex gap-[30px]">
+            <div
+              class="num bg-[#353535] px-[25px] py-[8px] rounded-[30px] text-[16px] md:text-[20px] lg:text-[28px] 2xl:text-[32px] text-[white] items-center"
+            >
+              Koleksi
+            </div>
+            <div
+              class="num bg-[#353535] px-[25px] py-[8px] rounded-[30px] text-[16px] md:text-[20px] lg:text-[28px] 2xl:text-[32px] text-[white] items-center"
+            >
+              Nusantara
+            </div>
+            <div
+              class="num bg-[#353535] px-[25px] py-[8px] rounded-[30px] text-[16px] md:text-[20px] lg:text-[28px] 2xl:text-[32px] text-[white] items-center"
+            >
+              Koleksi
+            </div>
+            <div
+              class="num bg-[#353535] px-[25px] py-[8px] rounded-[30px] text-[16px] md:text-[20px] lg:text-[28px] 2xl:text-[32px] text-[white] items-center"
+            >
+              Indonesia
+            </div>
+            <div
+              class="num bg-[#353535] px-[25px] py-[8px] rounded-[30px] text-[16px] md:text-[20px] lg:text-[28px] 2xl:text-[32px] text-[white] items-center"
+            >
+              Hari Raya
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex justify-center items-center">
+        <button
+          id="desk-btn"
+          class="w-[28%] jual-btn active flex justify-center"
+        >
+          <div
+            class="flex items-center gap-[15px] 2xl:gap-[30px] pb-[10px] px-[30px] justify-center"
+          >
+            <h3
+              class="text-[16px] md:text-[20px] lg:text-[28px] 2xl:text-[36px] text-[#929191]"
+            >
+              Deskripsi
+            </h3>
+          </div>
+        </button>
+
+        <button id="penawaran-btn" class="w-[28%] jual-btn flex justify-center">
+          <div
+            class="flex items-center gap-[15px] 2xl:gap-[30px] pb-[10px] px-[30px] justify-center"
+          >
+            <h3
+              class="text-[16px] md:text-[20px] lg:text-[28px] 2xl:text-[36px] text-[#929191]"
+            >
+              Penawaran
+            </h3>
+          </div>
+        </button>
+
+        <button id="hasil-btn" class="w-[28%] jual-btn flex justify-center">
+          <div
+            class="flex items-center gap-[15px] 2xl:gap-[30px] pb-[10px] px-[30px] justify-center"
+          >
+            <h3
+              class="text-[16px] md:text-[20px] lg:text-[28px] 2xl:text-[36px] text-[#929191]"
+            >
+              Hasil Penawaran
+            </h3>
+          </div>
+        </button>
+      </div>
+
+      <div
+        class="px-[40px] md:px-[80px] lg:px-[120px] py-[60px] mt-[30px] mb-[60px] flex overflow-hidden w-full bg-black"
+      >
+        <div id="jual-nft-con" class="jualNFT-con w-full"></div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <div
+      class="px-[40px] md:px-[80px] lg:px-[120px] py-[40px] flex flex-col justify-center items-center"
+    >
+      <div class="w-[75%] flex flex-col justify-center pb-[100px]">
+        <h2
+          class="text-[24px] md:text-[30px] lg:text-[40px] 2xl:text-[48px] text-center"
+        >
+          Dapatkan Lebih Banyak Informasi
+        </h2>
+        <p
+          class="text-center text-[12px] md:text-[14px] lg:text-[16px] 2xl:text-[20px] my-[40px]"
+        >
+          Bergabunglah dengan SatriaNFT untuk tetap terhubung dengan rilis fitur
+          terbaru, peluncuran NFT, serta tips dan trik menarik. Dapatkan akses
+          eksklusif ke konten dan informasi terbaru, serta menjadi bagian dari
+          komunitas yang berkembang. Jangan lewatkan kesempatan untuk selalu
+          update dengan inovasi dan peluang di dunia NFT!
+        </p>
+        <div
+          class="flex justify-center items-center relative text-[12px] md:text-[16px]"
+        >
+          <input
+            type="text"
+            name=""
+            id=""
+            placeholder="Masukkan Alamat Surel Anda..."
+            class="rounded-[40px] bg-[white] border-none w-[85%] px-[20px] py-[15px] text-[black]"
+          />
+          <button
+            class="bg-[#4639FA] px-[15px] py-[13px] rounded-[40px] md:absolute md:right-[7.8%]"
+          >
+            Berlangganan
+          </button>
+        </div>
+      </div>
+      <div
+        class="flex flex-col gap-[30px] md:gap-0 justify-center md:flex-row md:justify-between pt-[100px] border-t-[solid] border-t-[1px] border-t-[#879CB5] w-full"
+      >
+        <div class="w-fit">
+          <img
+            src="assets/Logo.png"
+            alt=""
+            class="w-[140px] md:w-[160px] lg:w-[180px] 2xl:w-[200px] mb-[15px]"
+          />
+          <p class="text-[12px] md:text-[14px] lg:text-[16px] 2xl:text-[20px]">
+            SatriaNFT adalah
+            <span class="font-semibold">pasar terdepan di Ethereum</span> <br />
+            yang didedikasikan untuk karya NFT buatan anak<br />
+            bangsa. Platform ini menjadi rumah bagi generasi<br />
+            baru pencipta digital untuk mengekspresikan <br />imajinasi mereka.
+          </p>
+        </div>
+        <div>
+          <h3
+            class="text-[16px] md:text-[20px] lg:text-[24px] 2xl:text-[32px] font-medium mb-[15px]"
+          >
+            Sumber Daya
+          </h3>
+          <ul
+            class="flex flex-col gap-[10px] text-[#879CB5] text-[12px] md:text-[16px] 2xl:text-[20px]"
+          >
+            <li>
+              <a href=""> Jelajahi</a>
+            </li>
+            <li>
+              <a href="">Pasar NFTs</a>
+            </li>
+            <li>
+              <a href="">Cara Kerja</a>
+            </li>
+            <li>
+              <a href="">Tentang Kami</a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3
+            class="text-[16px] md:text-[20px] lg:text-[24px] 2xl:text-[32px] font-medium mb-[15px]"
+          >
+            Cara Kerja
+          </h3>
+          <ul
+            class="flex flex-col gap-[10px] text-[#879CB5] text-[12px] md:text-[16px] 2xl:text-[20px]"
+          >
+            <li>
+              <a href="">Hubungkan Wallet</a>
+            </li>
+            <li>
+              <a href="">Jelajahi NFTs</a>
+            </li>
+            <li>
+              <a href="">Pembayaran</a>
+            </li>
+            <li>
+              <a href="">Terima NFTs Anda</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3
+            class="text-[16px] md:text-[20px] lg:text-[24px] 2xl:text-[32px] font-medium mb-[15px]"
+          >
+            Lokasi
+          </h3>
+          <ul
+            class="flex flex-col gap-[10px] text-[#879CB5] text-[12px] md:text-[16px] 2xl:text-[20px]"
+          >
+            <li>
+              <a href=""> Jelajahi</a>
+            </li>
+            <li>
+              <a href=""
+                >Letjen S. Parman No.1,<br />
+                Jakarta Barat 11440</a
+              >
+            </li>
+            <li class="flex gap-[30px] mt-[10px]">
+              <a href=""
+                ><img src="assets/Discord.png" alt="" class="h-[30px]"
+              /></a>
+              <a href=""
+                ><img src="assets/Twitter.png" alt="" class="h-[30px]"
+              /></a>
+              <a href=""
+                ><img src="assets/Instagram.png" alt="" class="h-[30px]"
+              /></a>
+              <a href=""
+                ><img src="assets/Youtube.png" alt="" class="h-[30px]"
+              /></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <p
+        class="text-center mt-[100px] text-[12px] md:text-[14px] lg:text-[16px] 2xl:text-[20px] font-medium"
+      >
+        © 2024 SatriaNFT. hak cipta dilindungi Undang-undang
+      </p>
+    </div>
+  </body>
+  <script src="js/jualNFT.js"></script>
+  <script src="js/navbar.js" defer></script>
+</html>
