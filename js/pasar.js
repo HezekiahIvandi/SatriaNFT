@@ -293,7 +293,7 @@ const loadKreatorCard = (Infos) => {
   class="kreator-card bg-[#2B2B3E] rounded-[18px] 2xl:rounded-[24px] max-w-[420px] min-w-[300px] 2xl:w-[100%] px-[1rem] py-[1rem] items-center"
 >
   <div class="relative img-con">
-    <img class="pasar-card-img" src="${card.bgUrl}" alt="" />
+    <img class="pasar-card-img w-full h-auto" src="${card.bgUrl}" alt="" />
 
     <a href="${card.profileUrl}">
       <button
@@ -334,7 +334,7 @@ const loadKreatorCardExtra = (Infos) => {
   class="kreator-card bg-[#2B2B3E] rounded-[18px] 2xl:rounded-[24px] max-w-[420px] min-w-[300px] 2xl:w-[100%] px-[1rem] py-[1rem] items-center"
 >
   <div class="relative img-con">
-    <img class="pasar-card-img" src="${card.bgUrl}" alt="" />
+    <img class="pasar-card-img w-full h-auto" src="${card.bgUrl}" alt="" />
 
     <a href="${card.profileUrl}">
       <button
