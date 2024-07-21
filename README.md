@@ -1,3 +1,4 @@
+Website ini di host di [GitHub Pages](https://hezekiahivandi.github.io/CROWDIT2024-WebDesign-Armageddon/).
 # SatriaNFT
 ## Instalasi
 ### Instal dependencies
