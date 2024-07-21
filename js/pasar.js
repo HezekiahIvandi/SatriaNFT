@@ -293,7 +293,7 @@ const loadKreatorCard = (Infos) => {
   class="kreator-card bg-[#2B2B3E] rounded-[18px] 2xl:rounded-[24px] max-w-[420px] min-w-[300px] 2xl:w-[100%] px-[1rem] py-[1rem] items-center"
 >
   <div class="relative img-con">
-    <img class="pasar-card-img w-full h-auto" src="${card.bgUrl}" alt="" />
+    <img class="pasar-card-img" src="${card.bgUrl}" alt="" />
 
     <a href="${card.profileUrl}">
       <button
@@ -334,7 +334,7 @@ const loadKreatorCardExtra = (Infos) => {
   class="kreator-card bg-[#2B2B3E] rounded-[18px] 2xl:rounded-[24px] max-w-[420px] min-w-[300px] 2xl:w-[100%] px-[1rem] py-[1rem] items-center"
 >
   <div class="relative img-con">
-    <img class="pasar-card-img w-full h-auto" src="${card.bgUrl}" alt="" />
+    <img class="pasar-card-img" src="${card.bgUrl}" alt="" />
 
     <a href="${card.profileUrl}">
       <button
@@ -958,84 +958,84 @@ pasarInfo = {
   ],
   Kreator: [
     {
-      bgUrl: "/assets/NFTs/kreator/bg/1.png",
+      bgUrl: "assets/NFTs/kreator/bg/1.png",
       profileUrl: "profile.html?nav2/1",
       pfpUrl: "assets/NFTs/kreator/pfp/1.png",
       name: "CryptoPunks",
       balance: "100.7K",
     },
     {
-      bgUrl: "/assets/NFTs/kreator/bg/2.png",
+      bgUrl: "assets/NFTs/kreator/bg/2.png",
       profileUrl: "profile.html?nav2/2",
       pfpUrl: "assets/NFTs/kreator/pfp/2.png",
       name: "CryptoPunks",
       balance: "100.7K",
     },
     {
-      bgUrl: "/assets/NFTs/kreator/bg/3.png",
+      bgUrl: "assets/NFTs/kreator/bg/3.png",
       profileUrl: "profile.html?nav2/3",
       pfpUrl: "assets/NFTs/kreator/pfp/3.png",
       name: "CryptoPunks",
       balance: "100.7K",
     },
     {
-      bgUrl: "/assets/NFTs/kreator/bg/4.png",
+      bgUrl: "assets/NFTs/kreator/bg/4.png",
       profileUrl: "profile.html?nav2/4",
       pfpUrl: "assets/NFTs/kreator/pfp/4.png",
       name: "CryptoPunks",
       balance: "100.7K",
     },
     {
-      bgUrl: "/assets/NFTs/kreator/bg/5.png",
+      bgUrl: "assets/NFTs/kreator/bg/5.png",
       profileUrl: "profile.html?nav2/5",
       pfpUrl: "assets/NFTs/kreator/pfp/5.png",
       name: "CryptoPunks",
       balance: "100.7K",
     },
     {
-      bgUrl: "/assets/NFTs/kreator/bg/6.png",
+      bgUrl: "assets/NFTs/kreator/bg/6.png",
       profileUrl: "profile.html?nav2/6",
       pfpUrl: "assets/NFTs/kreator/pfp/6.png",
       name: "CryptoPunks",
       balance: "100.7K",
     },
     {
-      bgUrl: "/assets/NFTs/kreator/bg/7.png",
+      bgUrl: "assets/NFTs/kreator/bg/7.png",
       profileUrl: "profile.html?nav2/7",
       pfpUrl: "assets/NFTs/kreator/pfp/7.png",
       name: "CryptoPunks",
       balance: "100.7K",
     },
     {
-      bgUrl: "/assets/NFTs/kreator/bg/8.png",
+      bgUrl: "assets/NFTs/kreator/bg/8.png",
       profileUrl: "profile.html?nav2/8",
       pfpUrl: "assets/NFTs/kreator/pfp/8.png",
       name: "CryptoPunks",
       balance: "100.7K",
     },
     {
-      bgUrl: "/assets/NFTs/kreator/bg/9.png",
+      bgUrl: "assets/NFTs/kreator/bg/9.png",
       profileUrl: "profile.html?nav2/9",
       pfpUrl: "assets/NFTs/kreator/pfp/9.png",
       name: "CryptoPunks",
       balance: "100.7K",
     },
     {
-      bgUrl: "/assets/NFTs/kreator/bg/10.png",
+      bgUrl: "assets/NFTs/kreator/bg/10.png",
       profileUrl: "profile.html?nav2/10",
       pfpUrl: "assets/NFTs/kreator/pfp/10.png",
       name: "CryptoPunks",
       balance: "100.7K",
     },
     {
-      bgUrl: "/assets/NFTs/kreator/bg/11.png",
+      bgUrl: "assets/NFTs/kreator/bg/11.png",
       profileUrl: "profile.html?nav2/11",
       pfpUrl: "assets/NFTs/kreator/pfp/11.png",
       name: "CryptoPunks",
       balance: "100.7K",
     },
     {
-      bgUrl: "/assets/NFTs/kreator/bg/12.png",
+      bgUrl: "assets/NFTs/kreator/bg/12.png",
       profileUrl: "profile.html?nav2/12",
       pfpUrl: "assets/NFTs/kreator/pfp/12.png",
       name: "CryptoPunks",
@@ -1250,28 +1250,28 @@ pasarInfoExtra = {
   ],
   Kreator: [
     {
-      bgUrl: "/assets/NFTs/kreator/bg/13.png",
+      bgUrl: "assets/NFTs/kreator/bg/13.png",
       profileUrl: "profile.html?nav2/13",
       pfpUrl: "assets/NFTs/kreator/pfp/13.png",
       name: "CryptoPunks",
       balance: "100.7K",
     },
     {
-      bgUrl: "/assets/NFTs/kreator/bg/14.png",
+      bgUrl: "assets/NFTs/kreator/bg/14.png",
       profileUrl: "profile.html?nav2/14",
       pfpUrl: "assets/NFTs/kreator/pfp/14.png",
       name: "CryptoPunks",
       balance: "100.7K",
     },
     {
-      bgUrl: "/assets/NFTs/kreator/bg/15.png",
+      bgUrl: "assets/NFTs/kreator/bg/15.png",
       profileUrl: "profile.html?nav2/15",
       pfpUrl: "assets/NFTs/kreator/pfp/15.png",
       name: "CryptoPunks",
       balance: "100.7K",
     },
     {
-      bgUrl: "/assets/NFTs/kreator/bg/16.png",
+      bgUrl: "assets/NFTs/kreator/bg/16.png",
       profileUrl: "profile.html?nav2/16",
       pfpUrl: "assets/NFTs/kreator/pfp/16.png",
       name: "CryptoPunks",
