@@ -1,4 +1,7 @@
 Website ini di host di [GitHub Pages](https://hezekiahivandi.github.io/CROWDIT2024-WebDesign-Armageddon/).
+Akses website ini pada: [Link ini](https://hezekiahivandi.github.io/CROWDIT2024-WebDesign-Armageddon/).
+Website ini terdiri dari halaman Registrasi, Masuk, Jelajahi, Pasar NFTs, Cara Kerja, Jual NFTs, Top Kreator, Hubungkan Wallet
+
 # SatriaNFT
 ## Instalasi
 ### Instal dependencies
